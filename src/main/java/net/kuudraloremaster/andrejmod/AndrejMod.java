@@ -1,6 +1,7 @@
 package net.kuudraloremaster.andrejmod;
 
 import com.mojang.logging.LogUtils;
+import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -31,6 +32,7 @@ public class AndrejMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
 
