@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
+                        pOutput.accept(ModItems.PIXEL.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

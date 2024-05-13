@@ -14,6 +14,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PIXEL = ITEMS.register("pixel",
+            ()-> new Item(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }
