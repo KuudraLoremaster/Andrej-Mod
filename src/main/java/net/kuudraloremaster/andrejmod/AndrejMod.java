@@ -1,6 +1,7 @@
 package net.kuudraloremaster.andrejmod;
 
 import com.mojang.logging.LogUtils;
+import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -19,7 +20,7 @@ import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AndrejMod.MOD_ID)
-public class    AndrejMod
+public class AndrejMod
 {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "andrejmod";
@@ -28,6 +29,7 @@ public class    AndrejMod
     public AndrejMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
@@ -47,6 +49,7 @@ public class    AndrejMod
     private  void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.SAPPHIRE);
+            event.accept(ModItems.RAW_SAPPHIRE);
         }
     }
 
