@@ -2,7 +2,12 @@
   "item.andrejmod.sapphire": "Sapphire",
   "item.andrejmod.raw_sapphire": "Raw Sapphire",
   "item.andrejmod.pixel": "Pixelated Face IRL",
+  "item.andrejmod.metal_detector": "Metal Detector",
   "block.andrejmod.sapphire_block": "Block Of Sapphire",
   "block.andrejmod.raw_sapphire_block": "Block Of Raw Sapphire",
+  "block.andrejmod.sapphire_ore": "Sapphire Ore",
+  "block.andrejmod.nether_sapphire_ore": "Nether Sapphire Ore",
+  "block.andrejmod.end_stone_sapphire_ore": "End Sapphire Ore",
+  "block.andrejmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "creativetab.andrej_tab": "Andrej Mod"
 }
