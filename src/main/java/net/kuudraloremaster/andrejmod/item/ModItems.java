@@ -1,6 +1,7 @@
 package net.kuudraloremaster.andrejmod.item;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
+import net.kuudraloremaster.andrejmod.item.custom.BoarItem;
 import net.kuudraloremaster.andrejmod.item.custom.MetalDetectorItem;
 import net.kuudraloremaster.andrejmod.item.custom.PixelatedFaceItem;
 import net.minecraft.world.item.Item;
@@ -20,6 +21,7 @@ public class ModItems {
             ()-> new PixelatedFaceItem(new Item.Properties()));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             ()-> new MetalDetectorItem(new Item.Properties().durability(100)));
+    public static final RegistryObject<Item> BOAR = ITEMS.register("boar", () -> new BoarItem(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

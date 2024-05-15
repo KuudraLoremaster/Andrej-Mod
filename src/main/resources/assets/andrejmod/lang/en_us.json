@@ -9,5 +9,7 @@
   "block.andrejmod.nether_sapphire_ore": "Nether Sapphire Ore",
   "block.andrejmod.end_stone_sapphire_ore": "End Sapphire Ore",
   "block.andrejmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.andrejmod.sound_block": "Sound Block",
+  "item.andrejmod.boar": "Boar",
   "creativetab.andrej_tab": "Andrej Mod"
 }
