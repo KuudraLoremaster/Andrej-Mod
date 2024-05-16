@@ -11,5 +11,9 @@
   "block.andrejmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "block.andrejmod.sound_block": "Sound Block",
   "item.andrejmod.boar": "Boar",
+  "item.andrejmod.strawberry": "Strawberry",
+  "item.andrejmod.kfc": "Fried Chicken",
+  "item.andrejmod.raw_kfc": "Raw Fried Chicken",
+  "item.andrejmod.kfc_bucket": "Fried Chicken Bucket",
   "creativetab.andrej_tab": "Andrej Mod"
 }

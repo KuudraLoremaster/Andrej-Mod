@@ -29,6 +29,10 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
                         pOutput.accept(ModItems.BOAR.get());
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.KFC.get());
+                        pOutput.accept(ModItems.RAW_KFC.get());
+                        pOutput.accept(ModItems.KFC_BUCKET.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

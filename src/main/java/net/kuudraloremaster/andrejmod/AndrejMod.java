@@ -3,11 +3,31 @@ package net.kuudraloremaster.andrejmod;
 import com.mojang.logging.LogUtils;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
+import net.kuudraloremaster.andrejmod.item.ModFoods;
 import net.kuudraloremaster.andrejmod.item.ModItems;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.NonNullList;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.level.Explosion;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.level.NoteBlockEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,6 +38,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.ForgeRegistry;
+import net.minecraft.world.item.crafting.ShapedRecipe;
+
+import java.awt.event.ComponentListener;
+
+import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AndrejMod.MOD_ID)
@@ -54,9 +82,6 @@ public class AndrejMod
             event.accept(ModItems.RAW_SAPPHIRE);
         }
     }
-
-
-
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
@@ -73,4 +98,45 @@ public class AndrejMod
 
         }
     }
-}
+    public static Integer weight = 5;
+    @Mod.EventBusSubscriber(modid = "andrejmod", bus = Mod.EventBusSubscriber.Bus.FORGE)
+    public static class FoodEatingEventHandler {
+
+        @SubscribeEvent
+            public static void onItemUseFinish(LivingEntityUseItemEvent.Finish event) {
+                if (event.getEntity() instanceof Player) {
+                    Player player = (Player) event.getEntity();
+                    ItemStack itemStack = event.getItem();
+                    if (!player.getCommandSenderWorld().isClientSide && itemStack.getItem() == ModItems.KFC_BUCKET.get()) {
+                        player.sendSystemMessage(Component.literal("Your weight now is " + weight));
+                        weight += 20;
+                    }
+                        if (weight >= 180) {
+                            player.kill();
+                            weight = 0;
+                    }
+            }
+        }
+        public class JumpAndLandDetector {
+
+            private double prevY;
+            @SubscribeEvent
+            public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+                Player player = event.player;
+                Level world = player.getCommandSenderWorld();
+                if (weight >= 40) {
+                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 2));
+                }
+                if (event.phase == TickEvent.Phase.END && !event.player.getCommandSenderWorld().isClientSide()) {
+                    double currentY = player.getY();
+                        if (currentY < prevY) {
+                            if (weight >= 80) {
+                        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 10, 5));
+                        world.explode(null, player.getX(), player.getY(), player.getZ(), 4.0f, Level.ExplosionInteraction.BLOCK);
+                    }}
+
+                    prevY = currentY;
+                }
+            }
+        }
+    }}

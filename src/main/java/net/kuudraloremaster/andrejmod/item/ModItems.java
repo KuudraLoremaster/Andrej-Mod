@@ -21,7 +21,16 @@ public class ModItems {
             ()-> new PixelatedFaceItem(new Item.Properties()));
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
             ()-> new MetalDetectorItem(new Item.Properties().durability(100)));
-    public static final RegistryObject<Item> BOAR = ITEMS.register("boar", () -> new BoarItem(new Item.Properties()));
+    public static final RegistryObject<Item> BOAR = ITEMS.register("boar",
+            () -> new BoarItem(new Item.Properties()));
+    public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",
+            () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
+    public static final RegistryObject<Item> KFC = ITEMS.register("kfc",
+            () -> new Item(new Item.Properties().food(ModFoods.KFC)));
+    public static final RegistryObject<Item> RAW_KFC = ITEMS.register("raw_kfc",
+            () -> new Item(new Item.Properties().food(ModFoods.RAW_KFC)));
+    public static final RegistryObject<Item> KFC_BUCKET = ITEMS.register("kfc_bucket",
+            () -> new Item(new Item.Properties().food(ModFoods.KFC_BUCKET)));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }
