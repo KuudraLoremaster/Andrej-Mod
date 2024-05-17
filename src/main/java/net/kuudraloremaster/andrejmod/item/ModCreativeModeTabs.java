@@ -33,6 +33,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.KFC.get());
                         pOutput.accept(ModItems.RAW_KFC.get());
                         pOutput.accept(ModItems.KFC_BUCKET.get());
+                        pOutput.accept(ModItems.KYS_GUN.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

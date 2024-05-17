@@ -26,6 +26,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.NoteBlockEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -45,6 +46,7 @@ import net.minecraft.world.item.crafting.ShapedRecipe;
 
 import java.awt.event.ComponentListener;
 
+import static net.minecraft.world.item.Items.CHEST;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -82,6 +84,8 @@ public class AndrejMod
             event.accept(ModItems.RAW_SAPPHIRE);
         }
     }
+
+
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
@@ -108,35 +112,36 @@ public class AndrejMod
                     Player player = (Player) event.getEntity();
                     ItemStack itemStack = event.getItem();
                     if (!player.getCommandSenderWorld().isClientSide && itemStack.getItem() == ModItems.KFC_BUCKET.get()) {
-                        player.sendSystemMessage(Component.literal("Your weight now is " + weight));
                         weight += 20;
+                        player.sendSystemMessage(Component.literal("Your weight now is " + weight));
                     }
-                        if (weight >= 180) {
-                            player.kill();
-                            weight = 0;
+                    if(weight >= 300) {
+                        player.kill();
+                        weight = 0;
+                        player.sendSystemMessage(Component.literal("you were too fucking fat lmao"));
                     }
             }
         }
-        public class JumpAndLandDetector {
-
-            private double prevY;
-            @SubscribeEvent
-            public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-                Player player = event.player;
-                Level world = player.getCommandSenderWorld();
-                if (weight >= 40) {
-                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 2));
-                }
-                if (event.phase == TickEvent.Phase.END && !event.player.getCommandSenderWorld().isClientSide()) {
-                    double currentY = player.getY();
-                        if (currentY < prevY) {
-                            if (weight >= 80) {
-                        player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 10, 5));
-                        world.explode(null, player.getX(), player.getY(), player.getZ(), 4.0f, Level.ExplosionInteraction.BLOCK);
-                    }}
-
-                    prevY = currentY;
-                }
+    }
+    boolean isJumping = false; // Flag to track jump state
+    @SubscribeEvent
+    public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        Player player = event.player;
+        Level world = player.getCommandSenderWorld();
+        if (!player.onGround()) {
+            isJumping = true;
+        }
+        if (player.onGround() && isJumping && !player.getCommandSenderWorld().isClientSide) {
+            isJumping = false;
+            if (weight >= 80) {
+                double radius = weight * 0.04;
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 40, (int) radius));
+                world.explode(null, player.getX(), player.getY(), player.getZ(), 4, Level.ExplosionInteraction.BLOCK);
             }
         }
-    }}
+        if (weight >= 40) {
+            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 2));
+        }
+    }
+}
+

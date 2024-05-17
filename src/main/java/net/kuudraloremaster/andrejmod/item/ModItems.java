@@ -2,6 +2,7 @@ package net.kuudraloremaster.andrejmod.item;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
 import net.kuudraloremaster.andrejmod.item.custom.BoarItem;
+import net.kuudraloremaster.andrejmod.item.custom.KYSGun;
 import net.kuudraloremaster.andrejmod.item.custom.MetalDetectorItem;
 import net.kuudraloremaster.andrejmod.item.custom.PixelatedFaceItem;
 import net.minecraft.world.item.Item;
@@ -31,6 +32,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.RAW_KFC)));
     public static final RegistryObject<Item> KFC_BUCKET = ITEMS.register("kfc_bucket",
             () -> new Item(new Item.Properties().food(ModFoods.KFC_BUCKET)));
+    public static final RegistryObject<Item> KYS_GUN = ITEMS.register("kys_gun",
+            () -> new KYSGun(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }
