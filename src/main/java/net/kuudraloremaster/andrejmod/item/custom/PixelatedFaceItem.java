@@ -25,7 +25,9 @@ public class PixelatedFaceItem extends Item {
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         Player player = pContext.getPlayer();
-        player.sendSystemMessage(Component.literal("pixelated face is schizophrenic"));
+        if (!player.getCommandSenderWorld().isClientSide) {
+            player.sendSystemMessage(Component.literal("pixelated face is schizophrenic"));
+        }
         return InteractionResult.SUCCESS;
     }
 

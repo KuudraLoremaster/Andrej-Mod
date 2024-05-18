@@ -15,6 +15,15 @@
   "item.andrejmod.kfc": "Fried Chicken",
   "item.andrejmod.raw_kfc": "Raw Fried Chicken",
   "item.andrejmod.kfc_bucket": "Fried Chicken Bucket",
+  "item.andrejmod.never_goon": "NEVER GOON!!!!",
   "item.andrejmod.kys_gun": "⚡ ⚡ ⚡ KILL YOURSELF NOW ⚡ ⚡ ⚡  Zeldalord1",
+  "item.andrejmod.pine_cone": "Pine Cone",
+  "sounds.andrejmod.metal_detector_found_ore": "Metal Detector Jingle",
+  "sounds.andrejmod.sound_block_break": "Sound Block Broken",
+  "sounds.andrejmod.sound_block_step": "Sound Block Stepped On",
+  "sounds.andrejmod.sound_block_fall": "Sound Block Fell On",
+  "sounds.andrejmod.sound_block_hit": "Sound Block Hit",
+  "sounds.andrejmod.sound_block_place": "Sound Block Placed",
+  "sounds.andrejmod.never_goon": "GOONER ALERT !!!",
   "creativetab.andrej_tab": "Andrej Mod"
 }

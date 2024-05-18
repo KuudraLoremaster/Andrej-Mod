@@ -1,10 +1,7 @@
 package net.kuudraloremaster.andrejmod.item;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
-import net.kuudraloremaster.andrejmod.item.custom.BoarItem;
-import net.kuudraloremaster.andrejmod.item.custom.KYSGun;
-import net.kuudraloremaster.andrejmod.item.custom.MetalDetectorItem;
-import net.kuudraloremaster.andrejmod.item.custom.PixelatedFaceItem;
+import net.kuudraloremaster.andrejmod.item.custom.*;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -34,6 +31,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.KFC_BUCKET)));
     public static final RegistryObject<Item> KYS_GUN = ITEMS.register("kys_gun",
             () -> new KYSGun(new Item.Properties()));
+    public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
+            () -> new FuelItem(new Item.Properties(), 400));
+    public static final RegistryObject<Item> NEVER_GOON = ITEMS.register("never_goon",
+            () -> new NGItem(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }
