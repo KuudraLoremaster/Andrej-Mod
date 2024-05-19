@@ -35,6 +35,12 @@ public class ModItems {
             () -> new FuelItem(new Item.Properties(), 400));
     public static final RegistryObject<Item> NEVER_GOON = ITEMS.register("never_goon",
             () -> new NGItem(new Item.Properties()));
+    public static final RegistryObject<Item> MAGNUS = ITEMS.register("magnus",
+            () -> new MagnusItem(new Item.Properties()));
+    public static final RegistryObject<Item> WAFFLE = ITEMS.register("waffle",
+            () -> new Item(new Item.Properties().food(ModFoods.WAFFLE)));
+    public static final RegistryObject<Item> MAX_VERSTAPPEN = ITEMS.register("max_verstappen",
+            () -> new MaxVerstappenItem(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

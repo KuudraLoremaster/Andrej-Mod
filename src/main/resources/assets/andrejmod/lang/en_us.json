@@ -25,5 +25,18 @@
   "sounds.andrejmod.sound_block_hit": "Sound Block Hit",
   "sounds.andrejmod.sound_block_place": "Sound Block Placed",
   "sounds.andrejmod.never_goon": "GOONER ALERT !!!",
+  "block.andrejmod.sapphire_stairs": "Sapphire Stairs",
+  "block.andrejmod.sapphire_slab": "Sapphire Slab",
+  "block.andrejmod.sapphire_door": "Sapphire Door",
+  "block.andrejmod.sapphire_fence": "Sapphire Fence",
+  "block.andrejmod.sapphire_fence_gate": "Sapphire Fence Gate",
+  "block.andrejmod.sapphire_wall": "Sapphire Wall",
+  "block.andrejmod.sapphire_trapdoor": "Sapphire Trapdoor",
+  "block.andrejmod.sapphire_button": "Sapphire Button",
+  "block.andrejmod.sapphire_pressure_plate": "Sapphire Pressure Plate",
+  "item.andrejmod.magnus": "Magnus",
+  "item.andrejmod.waffle": "Waffle",
+  "item.andrejmod.max_verstappen": "Max Verstappen",
+  "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

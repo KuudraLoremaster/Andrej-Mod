@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.animal.camel.Camel;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
@@ -28,6 +29,9 @@ public class PixelatedFaceItem extends Item {
         if (!player.getCommandSenderWorld().isClientSide) {
             player.sendSystemMessage(Component.literal("pixelated face is schizophrenic"));
         }
+        Entity camel = new Camel(EntityType.CAMEL, pContext.getLevel());
+        camel.moveTo(player.getX(), player.getY(), player.getZ());
+        pContext.getLevel().addFreshEntity(camel);
         return InteractionResult.SUCCESS;
     }
 

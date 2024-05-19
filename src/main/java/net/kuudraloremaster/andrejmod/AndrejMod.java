@@ -117,6 +117,15 @@ public class AndrejMod
                         weight += 20;
                         player.sendSystemMessage(Component.literal("Your weight now is " + weight));
                     }
+                    if (!player.getCommandSenderWorld().isClientSide && itemStack.getItem() == ModItems.WAFFLE.get()) {
+                        if (weight < 10) {
+                            weight = 0;
+                        }
+                        else {
+                            weight -= 10;
+                        }
+                        player.sendSystemMessage(Component.literal("you have diabetes and you lost 10 weight.\nYour weight is now " + weight));
+                    }
                     if(weight >= 300) {
                         player.kill();
                         weight = 0;

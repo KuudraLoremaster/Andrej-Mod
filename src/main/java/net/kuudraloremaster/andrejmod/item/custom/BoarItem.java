@@ -27,9 +27,10 @@ public class BoarItem extends Item {
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         Player player = pContext.getPlayer();
-        player.sendSystemMessage(Component.literal("Boar"));
         player.playSound(SoundEvents.GENERIC_EXPLODE, 1, 1);
-
+        if (!player.getCommandSenderWorld().isClientSide) {
+            player.sendSystemMessage(Component.literal("Boar"));
+        }
         return InteractionResult.CONSUME;
     }
 
