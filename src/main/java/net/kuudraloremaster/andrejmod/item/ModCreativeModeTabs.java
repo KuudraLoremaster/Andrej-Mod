@@ -50,6 +50,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.WAFFLE.get());
                         pOutput.accept(ModItems.MAGNUS.get());
                         pOutput.accept(ModItems.MAX_VERSTAPPEN.get());
+                        pOutput.accept(ModItems.BALLS_CUTTER.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

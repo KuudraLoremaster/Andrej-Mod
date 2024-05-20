@@ -41,6 +41,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.WAFFLE)));
     public static final RegistryObject<Item> MAX_VERSTAPPEN = ITEMS.register("max_verstappen",
             () -> new MaxVerstappenItem(new Item.Properties()));
+    public static final RegistryObject<Item> BALLS_CUTTER = ITEMS.register("balls_cutter",
+            () -> new BallsCutterItem(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

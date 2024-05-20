@@ -40,5 +40,11 @@
     "sounds": [
       "andrejmod:never_goon"
     ]
+  },
+  "max_verstappen" : {
+    "subtitles": "sounds.andrejmod.max_verstappen",
+    "sounds": [
+      "andrejmod:max_verstappen"
+    ]
   }
 }

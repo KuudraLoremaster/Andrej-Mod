@@ -35,10 +35,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.PINE_CONE);
         simpleItem(ModItems.WAFFLE);
         simpleItem(ModItems.MAX_VERSTAPPEN);
+        simpleItem(ModItems.BALLS_CUTTER);
+
+
         // the family
         simpleItem(ModItems.PIXEL);
         simpleItem(ModItems.MAGNUS);
-        // no more famille
+
+
         simpleBlockItem(ModBlocks.SAPPHIRE_DOOR);
         fenceItem(ModBlocks.SAPPHIRE_FENCE, ModBlocks.SAPPHIRE_BLOCK);
         buttonItem(ModBlocks.SAPPHIRE_BUTTON, ModBlocks.SAPPHIRE_BLOCK);
