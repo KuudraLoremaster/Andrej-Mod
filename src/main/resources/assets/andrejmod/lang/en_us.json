@@ -38,6 +38,8 @@
   "item.andrejmod.waffle": "Waffle",
   "item.andrejmod.max_verstappen": "Max Verstappen",
   "item.andrejmod.balls_cutter": "Balls Cutter",
+  "item.andrejmod.dumbbell": "Dumbbell",
+  "item.andrejmod.windows": "Activate Windows",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

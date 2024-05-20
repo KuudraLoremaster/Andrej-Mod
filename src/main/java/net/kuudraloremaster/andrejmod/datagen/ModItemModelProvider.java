@@ -36,6 +36,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WAFFLE);
         simpleItem(ModItems.MAX_VERSTAPPEN);
         simpleItem(ModItems.BALLS_CUTTER);
+        simpleItem(ModItems.DUMBBELL);
+        simpleItem(ModItems.WINDOWS);
 
 
         // the family

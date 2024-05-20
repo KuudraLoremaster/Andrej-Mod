@@ -5,6 +5,7 @@ import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
 import net.kuudraloremaster.andrejmod.item.ModFoods;
 import net.kuudraloremaster.andrejmod.item.ModItems;
+import net.kuudraloremaster.andrejmod.item.custom.WindowsItem;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.NonNullList;
@@ -12,6 +13,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -119,7 +121,7 @@ public class AndrejMod
                     }
                     if (!player.getCommandSenderWorld().isClientSide && itemStack.getItem() == ModItems.WAFFLE.get()) {
                         if (weight < 10) {
-                            weight = 0;
+                            weight = 5;
                         }
                         else {
                             weight -= 10;
@@ -152,6 +154,9 @@ public class AndrejMod
         }
         if (weight >= 40) {
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 2));
+        }
+        if (WindowsItem.activatedWindows) {
+            player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 2));
         }
     }
 }

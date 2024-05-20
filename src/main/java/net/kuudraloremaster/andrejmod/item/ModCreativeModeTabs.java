@@ -51,6 +51,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MAGNUS.get());
                         pOutput.accept(ModItems.MAX_VERSTAPPEN.get());
                         pOutput.accept(ModItems.BALLS_CUTTER.get());
+                        pOutput.accept(ModItems.DUMBBELL.get());
+                        pOutput.accept(ModItems.WINDOWS.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

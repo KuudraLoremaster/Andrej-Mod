@@ -43,6 +43,10 @@ public class ModItems {
             () -> new MaxVerstappenItem(new Item.Properties()));
     public static final RegistryObject<Item> BALLS_CUTTER = ITEMS.register("balls_cutter",
             () -> new BallsCutterItem(new Item.Properties()));
+    public static final RegistryObject<Item> DUMBBELL = ITEMS.register("dumbbell",
+            () -> new DumbBellItem(new Item.Properties()));
+    public static final RegistryObject<Item> WINDOWS = ITEMS.register("windows",
+            () -> new WindowsItem(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }
