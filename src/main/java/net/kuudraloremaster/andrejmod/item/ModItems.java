@@ -39,14 +39,19 @@ public class ModItems {
             () -> new MagnusItem(new Item.Properties()));
     public static final RegistryObject<Item> WAFFLE = ITEMS.register("waffle",
             () -> new Item(new Item.Properties().food(ModFoods.WAFFLE)));
+//    F1 gooners
     public static final RegistryObject<Item> MAX_VERSTAPPEN = ITEMS.register("max_verstappen",
             () -> new MaxVerstappenItem(new Item.Properties()));
+    public static final RegistryObject<Item> SERGIO_PEREZ = ITEMS.register("sergio_perez",
+            () -> new SergioPerezItem(new Item.Properties()));
     public static final RegistryObject<Item> BALLS_CUTTER = ITEMS.register("balls_cutter",
             () -> new BallsCutterItem(new Item.Properties()));
     public static final RegistryObject<Item> DUMBBELL = ITEMS.register("dumbbell",
             () -> new DumbBellItem(new Item.Properties()));
     public static final RegistryObject<Item> WINDOWS = ITEMS.register("windows",
             () -> new WindowsItem(new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
+            () -> new StaffItem(new Item.Properties().stacksTo(1).durability(100)));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

@@ -37,9 +37,11 @@
   "item.andrejmod.magnus": "Magnus",
   "item.andrejmod.waffle": "Waffle",
   "item.andrejmod.max_verstappen": "Max Verstappen",
+  "item.andrejmod.sergio_perez": "Sergio Perez",
   "item.andrejmod.balls_cutter": "Balls Cutter",
   "item.andrejmod.dumbbell": "Dumbbell",
   "item.andrejmod.windows": "Activate Windows",
+  "item.andrejmod.sapphire_staff": "Sapphire Staff",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

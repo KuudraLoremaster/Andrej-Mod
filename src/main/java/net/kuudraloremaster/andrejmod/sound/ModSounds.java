@@ -21,7 +21,9 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_PLACE = registerSoundEvents("sound_block_place");
     public static final RegistryObject<SoundEvent> SOUND_BLOCK_HIT = registerSoundEvents("sound_block_hit");
     public static final RegistryObject<SoundEvent> NEVER_GOON = registerSoundEvents("never_goon");
+//  F1 racing insane crazy insanity
     public static final RegistryObject<SoundEvent> MAX_VERSTAPPEN = registerSoundEvents("max_verstappen");
+    public static final RegistryObject<SoundEvent> SERGIO_PEREZ = registerSoundEvents("sergio_perez");
 
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f,1f,

@@ -29,9 +29,11 @@ public class PixelatedFaceItem extends Item {
         if (!player.getCommandSenderWorld().isClientSide) {
             player.sendSystemMessage(Component.literal("pixelated face is schizophrenic"));
         }
+        BlockPos positionClicked = pContext.getClickedPos();
         Entity camel = new Camel(EntityType.CAMEL, pContext.getLevel());
-        camel.moveTo(player.getX(), player.getY(), player.getZ());
+        camel.moveTo(positionClicked.getX(), positionClicked.getY(), positionClicked.getZ());
         pContext.getLevel().addFreshEntity(camel);
+
         return InteractionResult.SUCCESS;
     }
 

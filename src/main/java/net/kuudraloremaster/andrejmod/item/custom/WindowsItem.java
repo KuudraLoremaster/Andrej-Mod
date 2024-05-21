@@ -22,7 +22,7 @@ public class WindowsItem extends Item {
                 player.sendSystemMessage(Component.literal("You can never activate windows, Zeldalord"));
             }
             else if (activatedWindows){
-                player.sendSystemMessage(player.getName());;
+                player.sendSystemMessage(Component.literal("You have already activated windows"));
             }
             else {
             player.sendSystemMessage(Component.literal("You have activated windows, GG!"));

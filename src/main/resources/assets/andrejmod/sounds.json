@@ -46,5 +46,11 @@
     "sounds": [
       "andrejmod:max_verstappen"
     ]
-  }
+  },
+  "sergio_perez" : {
+  "subtitles": "sounds.andrejmod.sergio_perez",
+  "sounds": [
+    "andrejmod:sergio_perez"
+  ]
+}
 }

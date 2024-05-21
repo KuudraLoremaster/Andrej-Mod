@@ -34,7 +34,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KFC_BUCKET);
         simpleItem(ModItems.PINE_CONE);
         simpleItem(ModItems.WAFFLE);
+//      First Update since 0.1 and we adding more F1 racers :fire: :fire:
         simpleItem(ModItems.MAX_VERSTAPPEN);
+        simpleItem(ModItems.SERGIO_PEREZ);
+
+
         simpleItem(ModItems.BALLS_CUTTER);
         simpleItem(ModItems.DUMBBELL);
         simpleItem(ModItems.WINDOWS);

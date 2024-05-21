@@ -49,9 +49,13 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.NEVER_GOON.get());
                         pOutput.accept(ModItems.WAFFLE.get());
                         pOutput.accept(ModItems.MAGNUS.get());
+//                      DUN DUN DUN SERGIO PEREZ
+//                      MAX VERSTAPPEN LALALALALALA
                         pOutput.accept(ModItems.MAX_VERSTAPPEN.get());
+                        pOutput.accept(ModItems.SERGIO_PEREZ.get());
                         pOutput.accept(ModItems.BALLS_CUTTER.get());
                         pOutput.accept(ModItems.DUMBBELL.get());
+                        pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
                         pOutput.accept(ModItems.WINDOWS.get());
                     })
                     .build());
