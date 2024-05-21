@@ -48,6 +48,15 @@
   "item.andrejmod.sapphire_hoe": "Sapphire Hoe",
   "item.andrejmod.sapphire_axe": "Sapphire Axe",
   "item.andrejmod.sapphire_sword": "Sapphire Sword",
+  "item.andrejmod.sapphire_chestplate": "Sapphire Chestplate",
+  "item.andrejmod.sapphire_helmet": "Sapphire Helmet",
+  "item.andrejmod.sapphire_boots": "Sapphire Boots",
+  "item.andrejmod.sapphire_leggings": "Sapphire Leggings",
+  "item.andrejmod.kuudra_follower_fragment": "Kuudra Follower Fragment",
+  "item.andrejmod.kuudra_follower_helmet": "Kuudra Follower Helmet",
+  "item.andrejmod.kuudra_follower_chestplate": "Kuudra Follower Chestplate",
+  "item.andrejmod.kuudra_follower_leggings": "Kuudra Follower Leggings",
+  "item.andrejmod.kuudra_follower_boots": "Kuudra Follower Boots",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

@@ -2,6 +2,7 @@ package net.kuudraloremaster.andrejmod;
 
 import com.mojang.logging.LogUtils;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
+import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
 import net.kuudraloremaster.andrejmod.item.ModFoods;
 import net.kuudraloremaster.andrejmod.item.ModItems;
@@ -59,6 +60,7 @@ import net.minecraftforge.registries.ForgeRegistry;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 
 import java.awt.event.ComponentListener;
+import java.util.List;
 
 import static net.minecraft.world.item.Items.CHEST;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;

@@ -64,6 +64,24 @@ public class ModItems {
             () -> new ShovelItem(ModToolTier.SAPPHIRE, 0.5f, .6f, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
             () -> new HoeItem(ModToolTier.SAPPHIRE, 0, 0, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE,ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE,ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE,ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots",
+            () -> new ArmorItem(ModArmorMaterials.SAPPHIRE,ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> KUUDRA_FOLLOWER_FRAGMENT = ITEMS.register("kuudra_follower_fragment",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> KUUDRA_FOLLOWER_HELMET = ITEMS.register("kuudra_follower_helmet",
+            () -> new ArmorItem(ModArmorMaterials.KUUDRA, ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> KUUDRA_FOLLOWER_CHESTPLATE = ITEMS.register("kuudra_follower_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.KUUDRA, ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> KUUDRA_FOLLOWER_LEGGINGS = ITEMS.register("kuudra_follower_leggings",
+            () -> new ArmorItem(ModArmorMaterials.KUUDRA, ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> KUUDRA_FOLLOWER_BOOTS = ITEMS.register("kuudra_follower_boots",
+            () -> new ArmorItem(ModArmorMaterials.KUUDRA,ArmorItem.Type.BOOTS,new Item.Properties()));
 
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);

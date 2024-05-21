@@ -58,6 +58,35 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.SAND)
                 .unlockedBy(getHasName(ModItems.KFC.get()), has(ModItems.KFC.get()))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KUUDRA_FOLLOWER_HELMET.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("   ")
+                .define('S', ModItems.KUUDRA_FOLLOWER_FRAGMENT.get())
+                .unlockedBy(getHasName(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()), has(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KUUDRA_FOLLOWER_CHESTPLATE.get())
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.KUUDRA_FOLLOWER_FRAGMENT.get())
+                .unlockedBy(getHasName(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()), has(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KUUDRA_FOLLOWER_LEGGINGS.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.KUUDRA_FOLLOWER_FRAGMENT.get())
+                .unlockedBy(getHasName(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()), has(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KUUDRA_FOLLOWER_BOOTS.get())
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.KUUDRA_FOLLOWER_FRAGMENT.get())
+                .unlockedBy(getHasName(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()), has(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()))
+                .save(pWriter);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_KFC.get(), 2)
                 .requires(Items.CHICKEN)
                 .unlockedBy(getHasName(Items.CHICKEN), has(Items.CHICKEN))

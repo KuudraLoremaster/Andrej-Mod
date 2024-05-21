@@ -64,6 +64,15 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SAPPHIRE_HOE.get());
                         pOutput.accept(ModItems.SAPPHIRE_SHOVEL.get());
                         pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
+                        pOutput.accept(ModItems.SAPPHIRE_BOOTS.get());
+                        pOutput.accept(ModItems.SAPPHIRE_CHESTPLATE.get());
+                        pOutput.accept(ModItems.SAPPHIRE_LEGGINGS.get());
+                        pOutput.accept(ModItems.SAPPHIRE_HELMET.get());
+                        pOutput.accept(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get());
+                        pOutput.accept(ModItems.KUUDRA_FOLLOWER_LEGGINGS.get());
+                        pOutput.accept(ModItems.KUUDRA_FOLLOWER_CHESTPLATE.get());
+                        pOutput.accept(ModItems.KUUDRA_FOLLOWER_BOOTS.get());
+                        pOutput.accept(ModItems.KUUDRA_FOLLOWER_HELMET.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

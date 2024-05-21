@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_kuudra_follower_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "andrejmod:kuudra_follower_fragment"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "andrejmod:kuudra_follower_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_kuudra_follower_fragment",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "andrejmod:kuudra_follower_leggings"
+    ]
+  },
+  "sends_telemetry_event": false
+}

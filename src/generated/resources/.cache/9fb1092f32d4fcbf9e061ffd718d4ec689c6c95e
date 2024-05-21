@@ -1,4 +1,8 @@
-// 1.20.1	2024-05-21T11:41:25.7123448	Recipes
+// 1.20.1	2024-05-21T20:32:36.3802865	Recipes
+f215373a7864f0eefee8249de34bf71673d8a048 data/andrejmod/advancements/recipes/combat/kuudra_follower_boots.json
+d970663a0d397096503b5202f550cf27102346f1 data/andrejmod/advancements/recipes/combat/kuudra_follower_chestplate.json
+6a72e0de0af0c43abec23cbfd365ad9df658667a data/andrejmod/advancements/recipes/combat/kuudra_follower_helmet.json
+b994bd6df0762a31ddbfb21a0e7cfc8331699e9e data/andrejmod/advancements/recipes/combat/kuudra_follower_leggings.json
 b836adde3e1ee332a51fe5604f3309c0f6f4e5e2 data/andrejmod/advancements/recipes/misc/kfc_bucket.json
 40552f24ae64a74aa873d9e570edda9da48552d9 data/andrejmod/advancements/recipes/misc/pixel.json
 1e206e3657750f17c9d861fb5cb15cfedf7243ae data/andrejmod/advancements/recipes/misc/raw_kfc.json
@@ -15,6 +19,10 @@ abdfa11a9404723dc8487c4c2e705f99fa4c6df8 data/andrejmod/advancements/recipes/mis
 3f6b512649f8504fbe48b4b7d08f9f52c2b3ca28 data/andrejmod/advancements/recipes/misc/sapphire_from_smelting_raw_sapphire.json
 9780000d7c1599588466381f172339c0b4276337 data/andrejmod/advancements/recipes/misc/sapphire_from_smelting_sapphire_ore.json
 17ab065dd221cc5fa84be39e95615afc11417cbb data/andrejmod/recipes/kfc_bucket.json
+e2662b2b14aa12633984a79763b5849480fc6bbc data/andrejmod/recipes/kuudra_follower_boots.json
+9a603998d9e12614b51d8ad46d37ec91b4cfc42a data/andrejmod/recipes/kuudra_follower_chestplate.json
+39f3350020c9e97a3d4322035ad54101ed0ffb01 data/andrejmod/recipes/kuudra_follower_helmet.json
+3a4624726789336c591ce519a7c9ca263868c98d data/andrejmod/recipes/kuudra_follower_leggings.json
 44183e0b891305f25d17fc4d492038d3287485c3 data/andrejmod/recipes/pixel.json
 13ca78973092467e502999fa3dca263de039cdce data/andrejmod/recipes/raw_kfc.json
 6c16e58899ae870c5167a93dc758533112cd4692 data/andrejmod/recipes/sapphire.json
