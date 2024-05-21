@@ -38,10 +38,16 @@
   "item.andrejmod.waffle": "Waffle",
   "item.andrejmod.max_verstappen": "Max Verstappen",
   "item.andrejmod.sergio_perez": "Sergio Perez",
+  "item.andrejmod.fernando_alonso": "Fernando Alonso",
   "item.andrejmod.balls_cutter": "Balls Cutter",
   "item.andrejmod.dumbbell": "Dumbbell",
   "item.andrejmod.windows": "Activate Windows",
   "item.andrejmod.sapphire_staff": "Sapphire Staff",
+  "item.andrejmod.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.andrejmod.sapphire_shovel": "Sapphire Shovel",
+  "item.andrejmod.sapphire_hoe": "Sapphire Hoe",
+  "item.andrejmod.sapphire_axe": "Sapphire Axe",
+  "item.andrejmod.sapphire_sword": "Sapphire Sword",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

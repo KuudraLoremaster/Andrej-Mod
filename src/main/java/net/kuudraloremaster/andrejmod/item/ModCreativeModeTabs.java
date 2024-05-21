@@ -51,12 +51,19 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.MAGNUS.get());
 //                      DUN DUN DUN SERGIO PEREZ
 //                      MAX VERSTAPPEN LALALALALALA
+//                      FERNANDO ALONOZO LALALALALA
                         pOutput.accept(ModItems.MAX_VERSTAPPEN.get());
                         pOutput.accept(ModItems.SERGIO_PEREZ.get());
+                        pOutput.accept(ModItems.FERNANDO_ALONSO.get());
                         pOutput.accept(ModItems.BALLS_CUTTER.get());
                         pOutput.accept(ModItems.DUMBBELL.get());
                         pOutput.accept(ModItems.SAPPHIRE_STAFF.get());
                         pOutput.accept(ModItems.WINDOWS.get());
+                        pOutput.accept(ModItems.SAPPHIRE_PICKAXE.get());
+                        pOutput.accept(ModItems.SAPPHIRE_AXE.get());
+                        pOutput.accept(ModItems.SAPPHIRE_HOE.get());
+                        pOutput.accept(ModItems.SAPPHIRE_SHOVEL.get());
+                        pOutput.accept(ModItems.SAPPHIRE_SWORD.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

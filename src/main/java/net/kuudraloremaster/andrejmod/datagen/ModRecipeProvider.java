@@ -7,10 +7,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.ShapelessRecipe;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -23,14 +20,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModItems.RAW_SAPPHIRE.get(),
             ModBlocks.SAPPHIRE_ORE.get(),ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),ModBlocks.NETHER_SAPPHIRE_ORE.get(),
             ModBlocks.END_STONE_SAPPHIRE_ORE.get());
+    private static final List<ItemLike> KFC_FOOD = List.of(ModItems.RAW_KFC.get());
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
-
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
         oreBlasting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 100, "sapphire");
         oreSmelting(pWriter, SAPPHIRE_SMELTABLES, RecipeCategory.MISC, ModItems.SAPPHIRE.get(), 0.25f, 200, "sapphire");
+        simpleCookingRecipe(pWriter, "campfire", RecipeSerializer.CAMPFIRE_COOKING_RECIPE, 50, ModItems.RAW_KFC.get(), ModItems.KFC.get(), .7f);
+        simpleCookingRecipe(pWriter, "smelting", RecipeSerializer.SMELTING_RECIPE, 100, ModItems.RAW_KFC.get(), ModItems.KFC.get(), .7f);
+        simpleCookingRecipe(pWriter, "smoking", RecipeSerializer.SMOKING_RECIPE, 25, ModItems.RAW_KFC.get(), ModItems.KFC.get(), .7f);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SAPPHIRE_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")

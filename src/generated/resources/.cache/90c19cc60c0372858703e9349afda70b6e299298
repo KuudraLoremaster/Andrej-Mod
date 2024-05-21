@@ -1,5 +1,6 @@
-// 1.20.1	2024-05-19T09:00:12.122732	Tags for minecraft:block mod id andrejmod
+// 1.20.1	2024-05-21T11:41:25.7193262	Tags for minecraft:block mod id andrejmod
 468c6830658014a75f86c9555a5032231829a857 data/andrejmod/tags/blocks/metal_detector_valuables.json
+cdf0893a1abe4d26669512b2b415686aa605c7d3 data/andrejmod/tags/blocks/needs_sapphire_tool.json
 91a14e3d535c5217e19ce383ac520e460d147afb data/forge/tags/blocks/needs_netherite_tool.json
 b48dd6ce08b0270d2d1d81a6d94045fa30077f36 data/minecraft/tags/blocks/fences.json
 72c2b698b566d502519aad3dcd7435d2bd4a74fa data/minecraft/tags/blocks/fence_gates.json

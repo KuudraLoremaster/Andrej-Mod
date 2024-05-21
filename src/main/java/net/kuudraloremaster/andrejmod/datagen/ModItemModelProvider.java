@@ -37,11 +37,17 @@ public class ModItemModelProvider extends ItemModelProvider {
 //      First Update since 0.1 and we adding more F1 racers :fire: :fire:
         simpleItem(ModItems.MAX_VERSTAPPEN);
         simpleItem(ModItems.SERGIO_PEREZ);
+        simpleItem(ModItems.FERNANDO_ALONSO);
 
 
         simpleItem(ModItems.BALLS_CUTTER);
         simpleItem(ModItems.DUMBBELL);
         simpleItem(ModItems.WINDOWS);
+        handheldItem(ModItems.SAPPHIRE_AXE);
+        handheldItem(ModItems.SAPPHIRE_HOE);
+        handheldItem(ModItems.SAPPHIRE_PICKAXE);
+        handheldItem(ModItems.SAPPHIRE_SHOVEL);
+        handheldItem(ModItems.SAPPHIRE_SWORD);
 
 
         // the family
@@ -93,6 +99,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(AndrejMod.MOD_ID,"item/" + item.getId().getPath()));
+    }
+    private ItemModelBuilder handheldItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/handheld")).texture("layer0",
+                new ResourceLocation(AndrejMod.MOD_ID, "item/" + item.getId().getPath()));
     }
 
 }

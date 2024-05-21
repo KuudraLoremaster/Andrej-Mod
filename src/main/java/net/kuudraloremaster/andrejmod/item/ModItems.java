@@ -2,7 +2,7 @@ package net.kuudraloremaster.andrejmod.item;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
 import net.kuudraloremaster.andrejmod.item.custom.*;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -44,6 +44,8 @@ public class ModItems {
             () -> new MaxVerstappenItem(new Item.Properties()));
     public static final RegistryObject<Item> SERGIO_PEREZ = ITEMS.register("sergio_perez",
             () -> new SergioPerezItem(new Item.Properties()));
+    public static final RegistryObject<Item> FERNANDO_ALONSO = ITEMS.register("fernando_alonso",
+            () -> new FernandoAlonsoItem(new Item.Properties()));
     public static final RegistryObject<Item> BALLS_CUTTER = ITEMS.register("balls_cutter",
             () -> new BallsCutterItem(new Item.Properties()));
     public static final RegistryObject<Item> DUMBBELL = ITEMS.register("dumbbell",
@@ -52,6 +54,17 @@ public class ModItems {
             () -> new WindowsItem(new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
             () -> new StaffItem(new Item.Properties().stacksTo(1).durability(100)));
+    public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
+            () -> new SwordItem(ModToolTier.SAPPHIRE, 1, 1f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
+            () -> new PickaxeItem(ModToolTier.SAPPHIRE, 4, 2, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe",
+            () -> new AxeItem(ModToolTier.SAPPHIRE, 5, 1.3f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel",
+            () -> new ShovelItem(ModToolTier.SAPPHIRE, 0.5f, .6f, new Item.Properties()));
+    public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
+            () -> new HoeItem(ModToolTier.SAPPHIRE, 0, 0, new Item.Properties()));
+
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

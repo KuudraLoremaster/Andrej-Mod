@@ -1,7 +1,8 @@
-// 1.20.1	2024-05-21T10:41:41.9799021	Item Models: andrejmod
+// 1.20.1	2024-05-21T13:43:02.6033001	Item Models: andrejmod
 2b89f51cf2ee7d41746d4d58ff351822af9f65e4 assets/andrejmod/models/item/balls_cutter.json
 32e50e0734c44f9f71bf34768ba32dde729b20b4 assets/andrejmod/models/item/boar.json
 6ca02deff8b4c35711a704ebedc26bf039bb8597 assets/andrejmod/models/item/dumbbell.json
+768f088dcbc640a78f3ad502f51ed62834c389e3 assets/andrejmod/models/item/fernando_alonso.json
 d4d9c975008fd3cedddcca89b16c957e5b8f0ed8 assets/andrejmod/models/item/kfc.json
 7bd1675baf9f8fc97815bc9defe28242abf4fcfa assets/andrejmod/models/item/kfc_bucket.json
 6de5246e2881f1e12b759b9f5f54c722c7b4f3ed assets/andrejmod/models/item/kys_gun.json
@@ -14,13 +15,18 @@ f2bb031c7a4e8a59df187a51e40b567d59a466f2 assets/andrejmod/models/item/never_goon
 83615820fbe3ccb36aa62b5b4d2be228e147ec7d assets/andrejmod/models/item/raw_kfc.json
 c31d37f9df29cf8c867ec28ae405aafdd3770219 assets/andrejmod/models/item/raw_sapphire.json
 931ac14cfdaec278e794e33384bdb23689d85dcd assets/andrejmod/models/item/sapphire.json
+aa0a4df3839164676806bcd5afe66349f03780e8 assets/andrejmod/models/item/sapphire_axe.json
 83dbb22dfdfe148f7d04c98bbb5eec413b733755 assets/andrejmod/models/item/sapphire_button.json
 6dc2453a9699b23e3f24dc0a75fdee59fdbed0dd assets/andrejmod/models/item/sapphire_door.json
 88dec211a95c0146319ab19461db38fef69a80a2 assets/andrejmod/models/item/sapphire_fence.json
 5c8025fa404c77d3028068905e99f3407a5ba95b assets/andrejmod/models/item/sapphire_fence_gate.json
+767231f0ac9a28a80c00ed80ed4ae7ebb8478ff8 assets/andrejmod/models/item/sapphire_hoe.json
+349c360f4c303bc18ee13d58ccea1c3088932ecf assets/andrejmod/models/item/sapphire_pickaxe.json
 75d352ad428ff851bcc391896d11d7076a3f89c6 assets/andrejmod/models/item/sapphire_pressure_plate.json
+e5cffa9883e3b63290b9ecdee817fb2a4f287cae assets/andrejmod/models/item/sapphire_shovel.json
 d932da5321b33293d1d97a6e4f07d68e02dab2db assets/andrejmod/models/item/sapphire_slab.json
 b8816f4ad91adc36a2320e4fb41a32fd2e91a0ac assets/andrejmod/models/item/sapphire_stairs.json
+a1c71d50c708c47d82f2cb9c89ae170f7316bea2 assets/andrejmod/models/item/sapphire_sword.json
 fc34408b0f86ad7928dbd108f130e9aab7d64060 assets/andrejmod/models/item/sapphire_trapdoor.json
 973a50d22946108b79ea63adac8b335df08a0540 assets/andrejmod/models/item/sapphire_wall.json
 64192b7894edbd320014a0488d3dcaef8f249952 assets/andrejmod/models/item/sergio_perez.json

@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-20T12:32:31.0796087	Recipes
+// 1.20.1	2024-05-21T11:41:25.7123448	Recipes
 b836adde3e1ee332a51fe5604f3309c0f6f4e5e2 data/andrejmod/advancements/recipes/misc/kfc_bucket.json
 40552f24ae64a74aa873d9e570edda9da48552d9 data/andrejmod/advancements/recipes/misc/pixel.json
 1e206e3657750f17c9d861fb5cb15cfedf7243ae data/andrejmod/advancements/recipes/misc/raw_kfc.json
@@ -29,3 +29,9 @@ b3035c7734d542fa6f201842b7ab41bf48d2ae7d data/andrejmod/recipes/sapphire_from_bl
 aea930d90464bbfcec48cffd14c28a136f6c1dba data/andrejmod/recipes/sapphire_from_smelting_nether_sapphire_ore.json
 fe9bf3fff0efee3931c952b900ac4741f32103d4 data/andrejmod/recipes/sapphire_from_smelting_raw_sapphire.json
 84cca2171b657882c3a48bca0aaf5e3569dad30b data/andrejmod/recipes/sapphire_from_smelting_sapphire_ore.json
+734be15c5183d7bd3aaa1a215cfa5465ce5f00f8 data/minecraft/advancements/recipes/food/kfc_from_campfire.json
+d73730e6d514348e354209596eb56bf9a485e01c data/minecraft/advancements/recipes/food/kfc_from_smelting.json
+525f6795033ac7863537d464a8cffd7e2b300777 data/minecraft/advancements/recipes/food/kfc_from_smoking.json
+e115ca03e90d8583f3283438a98743fa1b6c8ac6 data/minecraft/recipes/kfc_from_campfire.json
+12aa176b65582de569e70bdf51cd70bdb52a7248 data/minecraft/recipes/kfc_from_smelting.json
+d257bc038557645d9bd5d270f1cd019af94b0090 data/minecraft/recipes/kfc_from_smoking.json

@@ -52,5 +52,11 @@
   "sounds": [
     "andrejmod:sergio_perez"
   ]
-}
+},
+  "fernando_alonso" : {
+    "subtitles": "sounds.andrejmod.fernando_alonso",
+    "sounds": [
+      "andrejmod:fernando_alonso"
+    ]
+  }
 }
