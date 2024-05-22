@@ -57,6 +57,12 @@
   "item.andrejmod.kuudra_follower_chestplate": "Kuudra Follower Chestplate",
   "item.andrejmod.kuudra_follower_leggings": "Kuudra Follower Leggings",
   "item.andrejmod.kuudra_follower_boots": "Kuudra Follower Boots",
+  "block.andrejmod.scale_block": "Digital Scale",
+  "block.andrejmod.ohio": "Pure Ohio",
+  "block.andrejmod.ohio_helmet": "Ohio Helmet",
+  "block.andrejmod.ohio_chestplate": "Ohio Chestplate",
+  "block.andrejmod.ohio_leggings": "Ohio Leggings",
+  "block.andrejmod.ohio_boots": "Ohio Boots",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

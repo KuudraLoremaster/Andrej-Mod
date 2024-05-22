@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "andrejmod:block/scale_block"
+    }
+  }
+}

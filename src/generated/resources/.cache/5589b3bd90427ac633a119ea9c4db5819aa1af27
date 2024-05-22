@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-19T09:00:12.1083765	Block States: andrejmod
+// 1.20.1	2024-05-22T14:31:45.2855727	Block States: andrejmod
 9605e7fc9f3c7c15f44968ade0f0e085d806f447 assets/andrejmod/blockstates/deepslate_sapphire_ore.json
 54264d3e0e80e03824c3f639b092b9e4841ce3ad assets/andrejmod/blockstates/end_stone_sapphire_ore.json
 582266256b7c06c645c1641d08bd8cb06d826f9b assets/andrejmod/blockstates/nether_sapphire_ore.json
@@ -14,6 +14,7 @@ d196cf8e1fbb9f582c601ccc654fc8beae058895 assets/andrejmod/blockstates/sapphire_p
 7672b73b87db106467ff91c31027d415255d62e8 assets/andrejmod/blockstates/sapphire_stairs.json
 3ccb7c8433fdaeb5a563b276030073679c1b54c8 assets/andrejmod/blockstates/sapphire_trapdoor.json
 ca3e949a8c0833bc32ea3c49a9016b79da1b5c43 assets/andrejmod/blockstates/sapphire_wall.json
+0d2cc45083dd941bb9e71763b6557d7fe424d821 assets/andrejmod/blockstates/scale_block.json
 ffa2f89e8e77ff8c46f22b7bd93244afe0955941 assets/andrejmod/blockstates/sound_block.json
 6c248a795eddda7d2597de7ef150a6346fb7f63c assets/andrejmod/models/block/deepslate_sapphire_ore.json
 8682d22ad1d2a91e631b59f921a5f153fa8c49f9 assets/andrejmod/models/block/end_stone_sapphire_ore.json
@@ -50,6 +51,7 @@ aa998e29578f8975baa040665d38886cd6321464 assets/andrejmod/models/block/sapphire_
 8a8e5979a303cb1b486cf3bedf4002c4b1fd3bef assets/andrejmod/models/block/sapphire_wall_post.json
 fc8f7b74ff14fd3c2ce0673baeb287baefcc4bea assets/andrejmod/models/block/sapphire_wall_side.json
 4c8e861d869778c847284276dd31caf75b203cc6 assets/andrejmod/models/block/sapphire_wall_side_tall.json
+7eadce0dc2b90e4b4bde50e86225ebc817a7814d assets/andrejmod/models/block/scale_block.json
 de43218e84fa7957578c17e092354643dc5ae10a assets/andrejmod/models/block/sound_block.json
 09632a5f57ff2d2f2651ea8223c5f7ac26fdb10b assets/andrejmod/models/item/deepslate_sapphire_ore.json
 f23b9a92c98ad6094f92f8b568f1d016042d07ec assets/andrejmod/models/item/end_stone_sapphire_ore.json
@@ -57,4 +59,5 @@ f23b9a92c98ad6094f92f8b568f1d016042d07ec assets/andrejmod/models/item/end_stone_
 0326c1f74d9df473b32a64bf0c88553efae6dd90 assets/andrejmod/models/item/raw_sapphire_block.json
 4334a02777907b39ab44f7d0ad62d6211bfec0df assets/andrejmod/models/item/sapphire_block.json
 e243a5f0f5c3ce98fdf515abca397c790252aed9 assets/andrejmod/models/item/sapphire_ore.json
+ec5ea3f2861e5fe58139d3dd148a1043c9124cc0 assets/andrejmod/models/item/scale_block.json
 def57bb218b1c6ff51a55ed16ba384cc1f20b8a9 assets/andrejmod/models/item/sound_block.json

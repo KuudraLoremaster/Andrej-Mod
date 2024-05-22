@@ -6,6 +6,7 @@ import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
 import net.kuudraloremaster.andrejmod.item.ModFoods;
 import net.kuudraloremaster.andrejmod.item.ModItems;
+import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
 import net.kuudraloremaster.andrejmod.item.custom.WindowsItem;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.client.Minecraft;
@@ -18,13 +19,10 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeManager;
@@ -61,9 +59,11 @@ import net.minecraft.world.item.crafting.ShapedRecipe;
 
 import java.awt.event.ComponentListener;
 import java.util.List;
+import java.util.Map;
 
 import static net.minecraft.world.item.Items.CHEST;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
+import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AndrejMod.MOD_ID)
@@ -146,6 +146,7 @@ public class AndrejMod
                         weight = 0;
                         player.sendSystemMessage(Component.literal("you were too fucking fat lmao"));
                     }
+
             }
         }
     }
@@ -174,6 +175,8 @@ public class AndrejMod
             player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 2));
         }
     }
+
+
     @SubscribeEvent
     public void onPlayerInteract(PlayerInteractEvent.EntityInteract event) {
         Player player = event.getEntity();

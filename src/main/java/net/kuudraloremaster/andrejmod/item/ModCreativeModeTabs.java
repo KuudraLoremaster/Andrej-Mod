@@ -73,6 +73,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.KUUDRA_FOLLOWER_CHESTPLATE.get());
                         pOutput.accept(ModItems.KUUDRA_FOLLOWER_BOOTS.get());
                         pOutput.accept(ModItems.KUUDRA_FOLLOWER_HELMET.get());
+                        pOutput.accept(ModBlocks.SCALE_BLOCK.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

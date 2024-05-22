@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-19T09:00:12.1125665	Loot Tables
+// 1.20.1	2024-05-22T14:31:45.2946541	Loot Tables
 6c86c5af5c936031215f8f55597cd0773c6ac4db data/andrejmod/loot_tables/blocks/deepslate_sapphire_ore.json
 2133f0e53fc045749ddcfdf77a56d980cc870914 data/andrejmod/loot_tables/blocks/end_stone_sapphire_ore.json
 e06970701ae733988c8f97950dbe537c69f3e53d data/andrejmod/loot_tables/blocks/nether_sapphire_ore.json
@@ -14,4 +14,5 @@ ef79457af79d49dc8f182fabe38fa5184cc24e09 data/andrejmod/loot_tables/blocks/sapph
 46e2ba1fbb4340588d92cdcc769064e70be5183c data/andrejmod/loot_tables/blocks/sapphire_stairs.json
 9117ddd7c60293766647b0af1579842374f70a4e data/andrejmod/loot_tables/blocks/sapphire_trapdoor.json
 bf5fdf606fb1d354931d07766d244b073db1d9e1 data/andrejmod/loot_tables/blocks/sapphire_wall.json
+288a7fd16e07c58053c2fd80ecd8fdce663d8b2e data/andrejmod/loot_tables/blocks/scale_block.json
 cde692e26063a1ecf6c5e8cf9c2ddca2dc24acff data/andrejmod/loot_tables/blocks/sound_block.json

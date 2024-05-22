@@ -13,7 +13,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
     SAPPHIRE("sapphire", 26, new int[]{5,7,5,4}, 25, SoundEvents.ARMOR_EQUIP_GOLD,
             1f, 0f, () -> Ingredient.of(ModItems.SAPPHIRE.get())),
     KUUDRA("kuudra", 26, new int[]{8,10,9,7}, 25, SoundEvents.ARMOR_EQUIP_GOLD,
-            1f, 0f, () -> Ingredient.of(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()));;
+            1f, 0f, () -> Ingredient.of(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get())),
+    OHIO("ohio", 30, new int[]{10,14,12,9}, 25, SoundEvents.ARMOR_EQUIP_GOLD,
+            1f, .5f, () -> Ingredient.of(ModItems.OHIO.get()));
     private final String name;
     private final int durabilityMultiplier;
     private final int[] protectionAmounts;

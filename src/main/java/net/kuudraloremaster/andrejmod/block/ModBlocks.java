@@ -1,6 +1,7 @@
 package net.kuudraloremaster.andrejmod.block;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
+import net.kuudraloremaster.andrejmod.block.custom.ScaleBlock;
 import net.kuudraloremaster.andrejmod.block.custom.SoundBlock;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
@@ -45,6 +46,8 @@ public class ModBlocks {
                     BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
     public static final RegistryObject<Block> SAPPHIRE_SLAB = registerBlock("sapphire_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
+    public static final RegistryObject<Block> SCALE_BLOCK = registerBlock("scale_block",
+            () -> new ScaleBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> SAPPHIRE_BUTTON = registerBlock("sapphire_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.AMETHYST),
                     BlockSetType.IRON, 10, true));
@@ -61,6 +64,7 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
     public static final RegistryObject<Block> SAPPHIRE_TRAPDOOR = registerBlock("sapphire_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
