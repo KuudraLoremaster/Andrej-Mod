@@ -59,10 +59,11 @@
   "item.andrejmod.kuudra_follower_boots": "Kuudra Follower Boots",
   "block.andrejmod.scale_block": "Digital Scale",
   "block.andrejmod.ohio": "Pure Ohio",
-  "block.andrejmod.ohio_helmet": "Ohio Helmet",
-  "block.andrejmod.ohio_chestplate": "Ohio Chestplate",
-  "block.andrejmod.ohio_leggings": "Ohio Leggings",
-  "block.andrejmod.ohio_boots": "Ohio Boots",
+  "item.andrejmod.ohio_helmet": "Ohio Helmet",
+  "item.andrejmod.ohio_chestplate": "Ohio Chestplate",
+  "item.andrejmod.ohio_leggings": "Ohio Leggings",
+  "item.andrejmod.ohio_boots": "Ohio Boots",
+  "item.andrejmod.ohio": "Ohio",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

@@ -15,9 +15,15 @@ public class ScaleBlock extends Block {
     }
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
-        Player player = (Player) pEntity;
-        if (!pLevel.isClientSide()){
-            player.sendSystemMessage(Component.literal("Your Weight is:" + AndrejMod.weight));
+        if (!(pEntity instanceof Player)) {
+            Entity entity = null;
         }
+        else {
+            Player entity = (Player) pEntity;
+            if (!pLevel.isClientSide()){
+                entity.sendSystemMessage(Component.literal("Your Weight is: " + AndrejMod.weight));
+            }
+        }
+
     }
 }

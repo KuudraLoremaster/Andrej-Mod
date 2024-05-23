@@ -86,7 +86,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.KUUDRA_FOLLOWER_FRAGMENT.get())
                 .unlockedBy(getHasName(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()), has(ModItems.KUUDRA_FOLLOWER_FRAGMENT.get()))
                 .save(pWriter);
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OHIO_HELMET.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("   ")
+                .define('S', ModItems.OHIO.get())
+                .unlockedBy(getHasName(ModItems.OHIO.get()), has(ModItems.OHIO.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OHIO_CHESTPLATE.get())
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.OHIO.get())
+                .unlockedBy(getHasName(ModItems.OHIO.get()), has(ModItems.OHIO.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OHIO_LEGGINGS.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.OHIO.get())
+                .unlockedBy(getHasName(ModItems.OHIO.get()), has(ModItems.OHIO.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.OHIO_BOOTS.get())
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.OHIO.get())
+                .unlockedBy(getHasName(ModItems.OHIO.get()), has(ModItems.OHIO.get()))
+                .save(pWriter);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_KFC.get(), 2)
                 .requires(Items.CHICKEN)
                 .unlockedBy(getHasName(Items.CHICKEN), has(Items.CHICKEN))
