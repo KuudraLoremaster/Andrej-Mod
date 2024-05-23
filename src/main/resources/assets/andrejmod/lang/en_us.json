@@ -64,6 +64,11 @@
   "item.andrejmod.ohio_leggings": "Ohio Leggings",
   "item.andrejmod.ohio_boots": "Ohio Boots",
   "item.andrejmod.ohio": "Ohio",
+  "item.andrejmod.maid": "Maid",
+  "item.andrejmod.maid_helmet": "Maid Helmet",
+  "item.andrejmod.maid_boots": "Maid Boots",
+  "item.andrejmod.maid_chestplate": "Maid Chestplate",
+  "item.andrejmod.maid_leggings": "Maid Leggings",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

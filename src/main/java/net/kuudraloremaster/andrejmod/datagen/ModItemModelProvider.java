@@ -57,7 +57,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KFC_BUCKET);
         simpleItem(ModItems.PINE_CONE);
         simpleItem(ModItems.WAFFLE);
-//      First Update since 0.1 and we adding more F1 racers :fire: :fire:
+        simpleItem(ModItems.MAID);
+//      F1 racing
         simpleItem(ModItems.MAX_VERSTAPPEN);
         simpleItem(ModItems.SERGIO_PEREZ);
         simpleItem(ModItems.FERNANDO_ALONSO);
@@ -100,6 +101,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.OHIO_CHESTPLATE);
         trimmedArmorItem(ModItems.OHIO_LEGGINGS);
         trimmedArmorItem(ModItems.OHIO_HELMET);
+        trimmedArmorItem(ModItems.MAID_BOOTS);
+        trimmedArmorItem(ModItems.MAID_CHESTPLATE);
+        trimmedArmorItem(ModItems.MAID_LEGGINGS);
+        trimmedArmorItem(ModItems.MAID_BOOTS);
         simpleItem(ModItems.OHIO);
     }
     // Shoutout to El_Redstoniano for making this

@@ -92,6 +92,16 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.OHIO,ArmorItem.Type.BOOTS,new Item.Properties()));
     public static final RegistryObject<Item> OHIO = ITEMS.register("ohio",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MAID = ITEMS.register("maid",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MAID_HELMET = ITEMS.register("maid_helmet",
+            () -> new ModArmorItem(ModArmorMaterials.MAID,ArmorItem.Type.HELMET,new Item.Properties()));
+    public static final RegistryObject<Item> MAID_CHESTPLATE = ITEMS.register("maid_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.MAID,ArmorItem.Type.CHESTPLATE,new Item.Properties()));
+    public static final RegistryObject<Item> MAID_LEGGINGS = ITEMS.register("maid_leggings",
+            () -> new ArmorItem(ModArmorMaterials.MAID,ArmorItem.Type.LEGGINGS,new Item.Properties()));
+    public static final RegistryObject<Item> MAID_BOOTS = ITEMS.register("maid_boots",
+            () -> new ArmorItem(ModArmorMaterials.MAID,ArmorItem.Type.BOOTS,new Item.Properties()));
 
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);

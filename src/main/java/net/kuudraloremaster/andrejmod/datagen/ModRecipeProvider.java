@@ -118,6 +118,35 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.CHICKEN)
                 .unlockedBy(getHasName(Items.CHICKEN), has(Items.CHICKEN))
                 .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAID_HELMET.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("   ")
+                .define('S', ModItems.MAID.get())
+                .unlockedBy(getHasName(ModItems.MAID.get()), has(ModItems.MAID.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAID_CHESTPLATE.get())
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.MAID.get())
+                .unlockedBy(getHasName(ModItems.MAID.get()), has(ModItems.MAID.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAID_LEGGINGS.get())
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.MAID.get())
+                .unlockedBy(getHasName(ModItems.MAID.get()), has(ModItems.MAID.get()))
+                .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAID.get())
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .define('S', ModItems.MAID.get())
+                .unlockedBy(getHasName(ModItems.MAID.get()), has(ModItems.MAID.get()))
+                .save(pWriter);
+
 
     }
 

@@ -13,7 +13,7 @@ public class ModFoods {
     public static final FoodProperties RAW_KFC = new FoodProperties.Builder().nutrition(2)
             .saturationMod(0.1f).effect(() -> new MobEffectInstance(MobEffects.HUNGER, 400), 0.4f).build();
     public static final FoodProperties KFC_BUCKET = new FoodProperties.Builder().nutrition(16)
-            .saturationMod(1f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400), 1f).build();
+            .saturationMod(.7f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400), 1f).build();
     public static final FoodProperties WAFFLE = new FoodProperties.Builder().nutrition(6)
             .saturationMod(.3f).effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 400), 1f).effect(() -> new MobEffectInstance(MobEffects.WEAKNESS, 400), 1f)
             .effect(() -> new MobEffectInstance(MobEffects.BLINDNESS, 400), 1f)

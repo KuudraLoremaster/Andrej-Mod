@@ -28,7 +28,11 @@ public class ModItemtagGenerator extends ItemTagsProvider {
                         ModItems.KUUDRA_FOLLOWER_BOOTS.get(),
                         ModItems.KUUDRA_FOLLOWER_CHESTPLATE.get(),
                         ModItems.KUUDRA_FOLLOWER_HELMET.get(),
-                        ModItems.KUUDRA_FOLLOWER_LEGGINGS.get()
+                        ModItems.KUUDRA_FOLLOWER_LEGGINGS.get(),
+                        ModItems.MAID_LEGGINGS.get(),
+                        ModItems.MAID_HELMET.get(),
+                        ModItems.MAID_CHESTPLATE.get(),
+                        ModItems.MAID_BOOTS.get()
 
                 );}
 }

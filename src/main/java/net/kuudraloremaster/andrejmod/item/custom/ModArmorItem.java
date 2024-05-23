@@ -34,6 +34,7 @@ public class ModArmorItem extends ArmorItem {
                 evaluateArmorEffects(player);
                 if (!isFat) {
                     kuudraArmor(player);
+                    ohioArmor(player);
                     prevWeight = AndrejMod.weight;
                 }
                 if (prevWeight != AndrejMod.weight) {
@@ -49,6 +50,14 @@ public class ModArmorItem extends ArmorItem {
         if (hasFullSuitOfArmorOn(player)) {
             if(hasFullSpecificArmorOn(player, ModArmorMaterials.KUUDRA) ) {
                 AndrejMod.weight += 160;
+                isFat = true;
+            }
+        }
+    }
+    public void ohioArmor(Player player) {
+        if (hasFullSuitOfArmorOn(player)) {
+            if(hasFullSpecificArmorOn(player, ModArmorMaterials.OHIO) ) {
+                AndrejMod.weight *= 2;
                 isFat = true;
             }
         }
