@@ -79,6 +79,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.OHIO_BOOTS.get());
                         pOutput.accept(ModItems.OHIO_HELMET.get());
                         pOutput.accept(ModItems.OHIO_LEGGINGS.get());
+                        pOutput.accept(ModItems.MAID.get());
+                        pOutput.accept(ModItems.MAID_LEGGINGS.get());
+                        pOutput.accept(ModItems.MAID_CHESTPLATE.get());
+                        pOutput.accept(ModItems.MAID_BOOTS.get());
+                        pOutput.accept(ModItems.MAID_HELMET.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {
