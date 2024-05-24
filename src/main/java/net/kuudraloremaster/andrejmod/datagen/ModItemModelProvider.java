@@ -62,6 +62,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MAX_VERSTAPPEN);
         simpleItem(ModItems.SERGIO_PEREZ);
         simpleItem(ModItems.FERNANDO_ALONSO);
+        simpleItem(ModItems.MICHAEL_SCHUMACHER);
 
 
         simpleItem(ModItems.BALLS_CUTTER);
@@ -104,7 +105,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.MAID_BOOTS);
         trimmedArmorItem(ModItems.MAID_CHESTPLATE);
         trimmedArmorItem(ModItems.MAID_LEGGINGS);
-        trimmedArmorItem(ModItems.MAID_BOOTS);
+        trimmedArmorItem(ModItems.MAID_HELMET);
         simpleItem(ModItems.OHIO);
     }
     // Shoutout to El_Redstoniano for making this

@@ -2,67 +2,67 @@
   "parent": "minecraft:item/generated",
   "overrides": [
     {
-      "model": "andrejmod:item/maid_boots_quartz_trim",
+      "model": "andrejmod:item/maid_helmet_quartz_trim",
       "predicate": {
         "minecraft:trim_type": 0.1
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_iron_trim",
+      "model": "andrejmod:item/maid_helmet_iron_trim",
       "predicate": {
         "minecraft:trim_type": 0.2
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_netherite_trim",
+      "model": "andrejmod:item/maid_helmet_netherite_trim",
       "predicate": {
         "minecraft:trim_type": 0.3
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_redstone_trim",
+      "model": "andrejmod:item/maid_helmet_redstone_trim",
       "predicate": {
         "minecraft:trim_type": 0.4
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_copper_trim",
+      "model": "andrejmod:item/maid_helmet_copper_trim",
       "predicate": {
         "minecraft:trim_type": 0.5
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_gold_trim",
+      "model": "andrejmod:item/maid_helmet_gold_trim",
       "predicate": {
         "minecraft:trim_type": 0.6
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_emerald_trim",
+      "model": "andrejmod:item/maid_helmet_emerald_trim",
       "predicate": {
         "minecraft:trim_type": 0.7
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_diamond_trim",
+      "model": "andrejmod:item/maid_helmet_diamond_trim",
       "predicate": {
         "minecraft:trim_type": 0.8
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_lapis_trim",
+      "model": "andrejmod:item/maid_helmet_lapis_trim",
       "predicate": {
         "minecraft:trim_type": 0.9
       }
     },
     {
-      "model": "andrejmod:item/maid_boots_amethyst_trim",
+      "model": "andrejmod:item/maid_helmet_amethyst_trim",
       "predicate": {
         "minecraft:trim_type": 1.0
       }
     }
   ],
   "textures": {
-    "layer0": "andrejmod:item/maid_boots"
+    "layer0": "andrejmod:item/maid_helmet"
   }
 }

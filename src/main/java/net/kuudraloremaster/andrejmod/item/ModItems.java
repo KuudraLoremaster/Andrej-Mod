@@ -102,6 +102,8 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.MAID,ArmorItem.Type.LEGGINGS,new Item.Properties()));
     public static final RegistryObject<Item> MAID_BOOTS = ITEMS.register("maid_boots",
             () -> new ArmorItem(ModArmorMaterials.MAID,ArmorItem.Type.BOOTS,new Item.Properties()));
+    public static final RegistryObject<Item> MICHAEL_SCHUMACHER = ITEMS.register("michael_schumacher",
+            () -> new MichaelSchumacherItem(new Item.Properties()));
 
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);

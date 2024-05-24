@@ -58,5 +58,11 @@
     "sounds": [
       "andrejmod:fernando_alonso"
     ]
+  },
+  "michael_schumacher" : {
+    "subtitles": "sounds.andrejmod.michael_schumacher",
+    "sounds": [
+      "andrejmod:michael_schumacher"
+    ]
   }
 }

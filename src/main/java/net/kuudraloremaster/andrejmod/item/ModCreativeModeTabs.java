@@ -52,9 +52,13 @@ public class ModCreativeModeTabs {
 //                      DUN DUN DUN SERGIO PEREZ
 //                      MAX VERSTAPPEN LALALALALALA
 //                      FERNANDO ALONOZO LALALALALA
+//                      Have we gone too far? or not far enough
                         pOutput.accept(ModItems.MAX_VERSTAPPEN.get());
                         pOutput.accept(ModItems.SERGIO_PEREZ.get());
                         pOutput.accept(ModItems.FERNANDO_ALONSO.get());
+                        pOutput.accept(ModItems.MICHAEL_SCHUMACHER.get());
+
+
                         pOutput.accept(ModItems.BALLS_CUTTER.get());
                         pOutput.accept(ModItems.DUMBBELL.get());
                         pOutput.accept(ModItems.SAPPHIRE_STAFF.get());

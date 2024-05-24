@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-23T14:38:33.4832683	Item Models: andrejmod
+// 1.20.1	2024-05-24T09:19:20.0684777	Item Models: andrejmod
 2b89f51cf2ee7d41746d4d58ff351822af9f65e4 assets/andrejmod/models/item/balls_cutter.json
 32e50e0734c44f9f71bf34768ba32dde729b20b4 assets/andrejmod/models/item/boar.json
 6ca02deff8b4c35711a704ebedc26bf039bb8597 assets/andrejmod/models/item/dumbbell.json
@@ -53,7 +53,7 @@ cdc495913e8d3f784b3bf4a55c0b6280b0bcb5d2 assets/andrejmod/models/item/kuudra_fol
 6de5246e2881f1e12b759b9f5f54c722c7b4f3ed assets/andrejmod/models/item/kys_gun.json
 aaefde6da0130d6d51cf1a8ffabb53a6d1db7799 assets/andrejmod/models/item/magnus.json
 4e51c18c852ea2681fe0e4903ef297f50e20e776 assets/andrejmod/models/item/maid.json
-5471de52fd858446bade11affff63c7afcbc8c2f assets/andrejmod/models/item/maid_boots.json
+920461cbbcdd645c4d8b74111fb36c70cc350b6c assets/andrejmod/models/item/maid_boots.json
 3831063c0833ad5be80792a85baf6542f35dbc55 assets/andrejmod/models/item/maid_boots_amethyst_trim.json
 2c50a680654e7156e599f3fb0fb906d47fe81c53 assets/andrejmod/models/item/maid_boots_copper_trim.json
 7d9f3be94633b18c84bbfbd05c6a086298b0129f assets/andrejmod/models/item/maid_boots_diamond_trim.json
@@ -75,6 +75,17 @@ bd3dfb22b0cc7cf9dc25f588aeb969195deeb531 assets/andrejmod/models/item/maid_chest
 126e8f4d38417249a11efdb43f67aeb818a05706 assets/andrejmod/models/item/maid_chestplate_netherite_trim.json
 28884422dd1abc386742847eab1881fcf03a7cc0 assets/andrejmod/models/item/maid_chestplate_quartz_trim.json
 52f2838eae06fb4f77ae9e3f7d602d644609da91 assets/andrejmod/models/item/maid_chestplate_redstone_trim.json
+603fafe9efa6f6166434fd8b543197cda51b6eee assets/andrejmod/models/item/maid_helmet.json
+69c7ced4bfd106a2f7ea5d63bd2cbf77c3711845 assets/andrejmod/models/item/maid_helmet_amethyst_trim.json
+7bd3126db44f2eae196bdb716577b7af530a80d4 assets/andrejmod/models/item/maid_helmet_copper_trim.json
+797f2850c6e4fbae82b0ff5a3f35cefb407783bc assets/andrejmod/models/item/maid_helmet_diamond_trim.json
+59d2205023acec63fe436bc5224264f0620c8d72 assets/andrejmod/models/item/maid_helmet_emerald_trim.json
+162a77ea2cf27b12e8ee5e9d3dadea10c25dabde assets/andrejmod/models/item/maid_helmet_gold_trim.json
+5ef3a6daad7e11f0d7473df4d9a1bc5c1b6e0bab assets/andrejmod/models/item/maid_helmet_iron_trim.json
+38cf38498f3771d8c146945e139f66c3bfc01492 assets/andrejmod/models/item/maid_helmet_lapis_trim.json
+705c8cfb1d23ea30d5ef3dd26fa3291b192ba8d0 assets/andrejmod/models/item/maid_helmet_netherite_trim.json
+df684cd16d27197393399053a8fc3ee20f085cfb assets/andrejmod/models/item/maid_helmet_quartz_trim.json
+16e7132fd12debe2ef2f68754a36ba6fa9282b91 assets/andrejmod/models/item/maid_helmet_redstone_trim.json
 967565f80f3d3df0eb434fa83405695c2ddfb430 assets/andrejmod/models/item/maid_leggings.json
 25e607d5c32ddf19854855fd92d47b3683affd56 assets/andrejmod/models/item/maid_leggings_amethyst_trim.json
 77307247151decc55b7527368c550f74b2898f24 assets/andrejmod/models/item/maid_leggings_copper_trim.json
@@ -88,6 +99,7 @@ fb69f9f0377a502bced34e6edf32440ffedc7495 assets/andrejmod/models/item/maid_leggi
 6b68be82445aced5fae1880abd3f0906f555b9bf assets/andrejmod/models/item/maid_leggings_redstone_trim.json
 c90900d0a48f56e95f1be49cdf05df13909c4e47 assets/andrejmod/models/item/max_verstappen.json
 3650770d43d0afd3f39c2777b46352299088a71f assets/andrejmod/models/item/metal_detector.json
+1f65ad5254e80b2f2f4b511a39bc47bb83c81920 assets/andrejmod/models/item/michael_schumacher.json
 f2bb031c7a4e8a59df187a51e40b567d59a466f2 assets/andrejmod/models/item/never_goon.json
 efa3cedbf0e3fb830189a55639e551c6dfa9eb96 assets/andrejmod/models/item/ohio.json
 25dd8729f33b48952feec9dc7318105718bdd85e assets/andrejmod/models/item/ohio_boots.json
