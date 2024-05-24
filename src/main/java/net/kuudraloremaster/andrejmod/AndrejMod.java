@@ -8,6 +8,7 @@ import net.kuudraloremaster.andrejmod.item.ModFoods;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
 import net.kuudraloremaster.andrejmod.item.custom.WindowsItem;
+import net.kuudraloremaster.andrejmod.loot.ModLootModifier;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -80,6 +81,7 @@ public class AndrejMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModLootModifier.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
 
