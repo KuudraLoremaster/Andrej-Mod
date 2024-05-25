@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.NEVER_GOON.get());
                         pOutput.accept(ModItems.WAFFLE.get());
                         pOutput.accept(ModItems.MAGNUS.get());
+                        pOutput.accept(ModItems.STRAWBERRY_SEED.get());
 //                      DUN DUN DUN SERGIO PEREZ
 //                      MAX VERSTAPPEN LALALALALALA
 //                      FERNANDO ALONOZO LALALALALA

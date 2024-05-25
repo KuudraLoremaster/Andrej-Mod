@@ -3,6 +3,7 @@ package net.kuudraloremaster.andrejmod.block;
 import net.kuudraloremaster.andrejmod.AndrejMod;
 import net.kuudraloremaster.andrejmod.block.custom.ScaleBlock;
 import net.kuudraloremaster.andrejmod.block.custom.SoundBlock;
+import net.kuudraloremaster.andrejmod.block.custom.StrawberryCropBlock;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
@@ -64,6 +65,8 @@ public class ModBlocks {
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
     public static final RegistryObject<Block> SAPPHIRE_TRAPDOOR = registerBlock("sapphire_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
+    public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
+            () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

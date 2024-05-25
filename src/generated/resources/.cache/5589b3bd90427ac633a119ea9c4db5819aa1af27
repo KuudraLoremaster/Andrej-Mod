@@ -1,4 +1,4 @@
-// 1.20.1	2024-05-22T14:31:45.2855727	Block States: andrejmod
+// 1.20.1	2024-05-24T12:27:15.0539404	Block States: andrejmod
 9605e7fc9f3c7c15f44968ade0f0e085d806f447 assets/andrejmod/blockstates/deepslate_sapphire_ore.json
 54264d3e0e80e03824c3f639b092b9e4841ce3ad assets/andrejmod/blockstates/end_stone_sapphire_ore.json
 582266256b7c06c645c1641d08bd8cb06d826f9b assets/andrejmod/blockstates/nether_sapphire_ore.json
@@ -16,6 +16,7 @@ d196cf8e1fbb9f582c601ccc654fc8beae058895 assets/andrejmod/blockstates/sapphire_p
 ca3e949a8c0833bc32ea3c49a9016b79da1b5c43 assets/andrejmod/blockstates/sapphire_wall.json
 0d2cc45083dd941bb9e71763b6557d7fe424d821 assets/andrejmod/blockstates/scale_block.json
 ffa2f89e8e77ff8c46f22b7bd93244afe0955941 assets/andrejmod/blockstates/sound_block.json
+c834286c5232ee5658336c880e782998689c030a assets/andrejmod/blockstates/strawberry_crop.json
 6c248a795eddda7d2597de7ef150a6346fb7f63c assets/andrejmod/models/block/deepslate_sapphire_ore.json
 8682d22ad1d2a91e631b59f921a5f153fa8c49f9 assets/andrejmod/models/block/end_stone_sapphire_ore.json
 8e904b4cd53677297eb4a70c071c84ed5906813b assets/andrejmod/models/block/nether_sapphire_ore.json
@@ -53,6 +54,12 @@ fc8f7b74ff14fd3c2ce0673baeb287baefcc4bea assets/andrejmod/models/block/sapphire_
 4c8e861d869778c847284276dd31caf75b203cc6 assets/andrejmod/models/block/sapphire_wall_side_tall.json
 7eadce0dc2b90e4b4bde50e86225ebc817a7814d assets/andrejmod/models/block/scale_block.json
 de43218e84fa7957578c17e092354643dc5ae10a assets/andrejmod/models/block/sound_block.json
+d9f638ab7c43dfb66b4921d34ec79c91b2a08f08 assets/andrejmod/models/block/strawberry_stage0.json
+806b7d0b26632b78988dee2090ce1b2d073ab9f3 assets/andrejmod/models/block/strawberry_stage1.json
+e98decca4e9cdec492c6c35d6723ec9bf9129ef9 assets/andrejmod/models/block/strawberry_stage2.json
+483012be275a7c840f145ee2a38cd6ed0b4edea4 assets/andrejmod/models/block/strawberry_stage3.json
+1cab90cbcea48d6717ec6f442bfa0299e370c327 assets/andrejmod/models/block/strawberry_stage4.json
+18507abe73326e85660e1a09fd15962721711a84 assets/andrejmod/models/block/strawberry_stage5.json
 09632a5f57ff2d2f2651ea8223c5f7ac26fdb10b assets/andrejmod/models/item/deepslate_sapphire_ore.json
 f23b9a92c98ad6094f92f8b568f1d016042d07ec assets/andrejmod/models/item/end_stone_sapphire_ore.json
 8460b0ef19037a2dd1f70d722ade44b3eee21562 assets/andrejmod/models/item/nether_sapphire_ore.json

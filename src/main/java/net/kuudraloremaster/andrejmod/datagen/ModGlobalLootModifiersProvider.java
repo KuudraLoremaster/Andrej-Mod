@@ -50,7 +50,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         }, ModItems.WAFFLE.get()));
         add("never_goon_from_suspicious_sand", new AddSusSandItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("archaeology/desert_pyramid")).build()
-        }, ModItems.WAFFLE.get()));
+        }, ModItems.NEVER_GOON.get()));
 
     }
 }

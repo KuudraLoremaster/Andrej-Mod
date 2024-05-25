@@ -74,6 +74,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SAPPHIRE_SHOVEL);
         handheldItem(ModItems.SAPPHIRE_SWORD);
         handheldItem(ModItems.KUUDRA_FOLLOWER_FRAGMENT);
+        handheldItem(ModItems.STRAWBERRY_SEED);
 
 
         // the family
