@@ -139,7 +139,7 @@ public class AndrejMod
         }
     }
     public static Integer weight = 5;
-    public static Integer karma = 10;
+    public static Integer karma = 1;
     @Mod.EventBusSubscriber(modid=MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class PlayerDeathListener {
 
