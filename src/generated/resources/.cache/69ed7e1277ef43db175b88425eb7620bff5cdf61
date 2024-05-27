@@ -1,9 +1,9 @@
-// 1.20.1	2024-05-24T11:48:02.8862452	Global Loot Modifiers : andrejmod
+// 1.20.1	2024-05-25T11:44:50.3622449	Global Loot Modifiers : andrejmod
 dd622f2e56e65dd4b4d3e2f41b53ba36d7fa1210 data/andrejmod/loot_modifiers/kuudra_follower_fragments_from_bastions.json
 31c84b8449809c41d848132f01841f6ecaddae61 data/andrejmod/loot_modifiers/magnus_from_desert_temple.json
 6890dd03be3e2a2a8007b005cfb0d0e0ed678dde data/andrejmod/loot_modifiers/maid_from_horses.json
 2e747b684ea547902102968bbf920aa25fd42eec data/andrejmod/loot_modifiers/metal_detector_from_jungle_temples.json
-04d2c782d64a32626fd099f5b086156e9b189515 data/andrejmod/loot_modifiers/never_goon_from_suspicious_sand.json
+dc4166c0cbab5db4a877337cf4b4b512c82e4c2e data/andrejmod/loot_modifiers/never_goon_from_suspicious_sand.json
 cb3c63cf9ba896bc495f2d131ea7fd12706030f6 data/andrejmod/loot_modifiers/ohio_from_ancient_city.json
 cb3c07a85c138c00e7f908b44c937c665bd3487f data/andrejmod/loot_modifiers/pine_cone_from_creeper.json
 2648769e8d85880811fd76fc001d3c6ce1866086 data/andrejmod/loot_modifiers/pine_cone_from_grass.json
