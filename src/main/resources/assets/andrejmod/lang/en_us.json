@@ -71,6 +71,8 @@
   "item.andrejmod.maid_chestplate": "Maid Chestplate",
   "item.andrejmod.maid_leggings": "Maid Leggings",
   "item.andrejmod.strawberry_seeds": "Strawberry Seeds",
+  "item.andrejmod.rhino_spawn_egg": "Rhino Spawn Egg",
+  "item.andrejmod.gooner_spawn_egg": "Gooner Spawn Egg",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }
