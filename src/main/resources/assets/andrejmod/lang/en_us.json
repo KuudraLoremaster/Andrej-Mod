@@ -73,6 +73,8 @@
   "item.andrejmod.strawberry_seeds": "Strawberry Seeds",
   "item.andrejmod.rhino_spawn_egg": "Rhino Spawn Egg",
   "item.andrejmod.gooner_spawn_egg": "Gooner Spawn Egg",
+  "entity.andrejmod.gooner": "Gooner",
+  "entity.andrejmod.rhino": "Rhino",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }
