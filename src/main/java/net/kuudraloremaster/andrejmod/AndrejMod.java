@@ -2,6 +2,9 @@ package net.kuudraloremaster.andrejmod;
 
 import com.mojang.logging.LogUtils;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
+import net.kuudraloremaster.andrejmod.entity.ModEntities;
+import net.kuudraloremaster.andrejmod.entity.client.RhinoRenderer;
+import net.kuudraloremaster.andrejmod.entity.client.GoonerRenderer;
 import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
 import net.kuudraloremaster.andrejmod.item.ModFoods;
@@ -12,6 +15,7 @@ import net.kuudraloremaster.andrejmod.loot.ModLootModifier;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.telemetry.TelemetryProperty;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -78,6 +82,7 @@ import java.util.UUID;
 import static net.minecraft.util.datafix.fixes.ItemIdFix.getItem;
 import static net.minecraft.world.InteractionHand.MAIN_HAND;
 import static net.minecraft.world.item.Items.CHEST;
+import static net.minecraft.world.item.Items.GOLD_ORE;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
 
@@ -96,6 +101,7 @@ public class AndrejMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEntities.register(modEventBus);
         ModLootModifier.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
@@ -135,7 +141,8 @@ public class AndrejMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+            EntityRenderers.register(ModEntities.GOONER.get(), GoonerRenderer::new);
         }
     }
     public static Integer weight = 5;

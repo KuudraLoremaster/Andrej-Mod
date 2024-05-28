@@ -1,8 +1,9 @@
-// 1.20.1	2024-05-24T12:17:32.0943535	Item Models: andrejmod
+// 1.20.1	2024-05-28T14:58:30.6137235	Item Models: andrejmod
 2b89f51cf2ee7d41746d4d58ff351822af9f65e4 assets/andrejmod/models/item/balls_cutter.json
 32e50e0734c44f9f71bf34768ba32dde729b20b4 assets/andrejmod/models/item/boar.json
 6ca02deff8b4c35711a704ebedc26bf039bb8597 assets/andrejmod/models/item/dumbbell.json
 768f088dcbc640a78f3ad502f51ed62834c389e3 assets/andrejmod/models/item/fernando_alonso.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/andrejmod/models/item/gooner_spawn_egg.json
 d4d9c975008fd3cedddcca89b16c957e5b8f0ed8 assets/andrejmod/models/item/kfc.json
 7bd1675baf9f8fc97815bc9defe28242abf4fcfa assets/andrejmod/models/item/kfc_bucket.json
 59f774a6a117a355c2869b6e41471e860f1bad3c assets/andrejmod/models/item/kuudra_follower_boots.json
@@ -150,6 +151,7 @@ ddcd0a6f83d149e017f5d4a01f0aee9724a13408 assets/andrejmod/models/item/ohio_leggi
 4925c0168b9a8d161f929b206dbdb0999afbd96d assets/andrejmod/models/item/pixel.json
 83615820fbe3ccb36aa62b5b4d2be228e147ec7d assets/andrejmod/models/item/raw_kfc.json
 c31d37f9df29cf8c867ec28ae405aafdd3770219 assets/andrejmod/models/item/raw_sapphire.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/andrejmod/models/item/rhino_spawn_egg.json
 931ac14cfdaec278e794e33384bdb23689d85dcd assets/andrejmod/models/item/sapphire.json
 aa0a4df3839164676806bcd5afe66349f03780e8 assets/andrejmod/models/item/sapphire_axe.json
 22b064113aeb20b80f95fa7baf4a9ada89254ea9 assets/andrejmod/models/item/sapphire_boots.json

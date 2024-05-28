@@ -2,8 +2,10 @@ package net.kuudraloremaster.andrejmod.item;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
+import net.kuudraloremaster.andrejmod.entity.ModEntities;
 import net.kuudraloremaster.andrejmod.item.custom.*;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -107,6 +109,10 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.MAID,ArmorItem.Type.BOOTS,new Item.Properties()));
     public static final RegistryObject<Item> STRAWBERRY_SEED = ITEMS.register("strawberry_seeds",
             () -> new ItemNameBlockItem(ModBlocks.STRAWBERRY_CROP.get() ,new Item.Properties()));
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5,new Item.Properties()));
+    public static final RegistryObject<Item> GOONER_SPAWN_EGG = ITEMS.register("gooner_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.GOONER, 0xfcba03, 0x32a852,new Item.Properties()));
 
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);

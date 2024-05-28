@@ -31,7 +31,8 @@ public class PixelatedFaceItem extends Item {
         }
         BlockPos positionClicked = pContext.getClickedPos();
         Entity camel = new Camel(EntityType.CAMEL, pContext.getLevel());
-        camel.moveTo(positionClicked.getX(), positionClicked.getY(), positionClicked.getZ());
+        int ds = positionClicked.getY() + 1;
+        camel.moveTo(positionClicked.getX(), ds, positionClicked.getZ());
         pContext.getLevel().addFreshEntity(camel);
 
         return InteractionResult.SUCCESS;
