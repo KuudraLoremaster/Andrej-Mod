@@ -20,3 +20,7 @@ Andrej Mod includes a wide variety of armor, such as Kuudra Follower, Maid Armor
 ## Weight
 
 Andrej Mod has a weight system if you eat too much Fried Chicken, too much weight and all will go wrong! So be careful when you eat!
+
+## Mobs
+Andrej has a wide variety of mobs such as the Gooner, Pex Mob and the rhino
+![enter image description here](https://media.discordapp.net/attachments/1244983544569397329/1245534582904852510/2024-05-29_20.29.36.png?ex=665a6b79&is=665919f9&hm=45ccc40ee366ca355dc8897826a1e321f73510cb5ab5d080a9cb3517ab479881&=&format=webp&quality=lossless&width=1178&height=663)
