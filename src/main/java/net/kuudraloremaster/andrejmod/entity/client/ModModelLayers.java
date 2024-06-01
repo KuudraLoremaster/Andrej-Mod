@@ -11,4 +11,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation GOONER_LAYER = new ModelLayerLocation(
             new ResourceLocation(AndrejMod.MOD_ID, "gooner_layer"), "main"
     );
+    public static final ModelLayerLocation PEX_LAYER = new ModelLayerLocation(
+            new ResourceLocation(AndrejMod.MOD_ID, "pex_layer"), "main"
+    );
 }

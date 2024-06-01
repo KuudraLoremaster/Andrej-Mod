@@ -1,9 +1,7 @@
 package net.kuudraloremaster.andrejmod.entity.custom;
 
 import net.kuudraloremaster.andrejmod.entity.ModEntities;
-import net.kuudraloremaster.andrejmod.entity.ai.GoonerAttackGoal;
 import net.kuudraloremaster.andrejmod.item.ModItems;
-import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -20,16 +18,14 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 
-public class GoonerEntity extends Animal {
-    public GoonerEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+public class PexEntity extends Animal {
+    public PexEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
     public final AnimationState idleAnimationState = new AnimationState();
@@ -45,26 +41,13 @@ public class GoonerEntity extends Animal {
         }
     }
     private static final EntityDataAccessor<Boolean> ATTACKING =
-            SynchedEntityData.defineId(GoonerEntity.class, EntityDataSerializers.BOOLEAN);
-    public final AnimationState attackAnimationState = new AnimationState();
-    public int attackAnimationTimeout = 0;
+            SynchedEntityData.defineId(PexEntity.class, EntityDataSerializers.BOOLEAN);
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
             this.idleAnimationTimeout = this.random.nextInt(40) + 80;
             this.idleAnimationState.start(this.tickCount);
         } else {
             --this.idleAnimationTimeout;
-        }
-
-        if (this.isAttacking() && attackAnimationTimeout <= 0) {
-            attackAnimationTimeout = 80;
-            attackAnimationState.start(this.tickCount);
-        } else {
-            --this.attackAnimationTimeout;
-        }
-
-        if (!this.isAttacking()) {
-            attackAnimationState.stop();
         }
     }
 
@@ -94,16 +77,13 @@ public class GoonerEntity extends Animal {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new GoonerAttackGoal(this, 1.0D, true));
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1.15D));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.15D, Ingredient.of(ModItems.KFC_BUCKET.get()), false));
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.10D));
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.10D));
-        this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 3f));
-        this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(1, new BreedGoal(this, 1.15D));
+        this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.10D));
+        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.10D));
+        this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 3f));
+        this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 
 
-        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -119,29 +99,26 @@ public class GoonerEntity extends Animal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel serverLevel, AgeableMob ageableMob) {
-        return ModEntities.GOONER.get().create(serverLevel);
+        return ModEntities.PEX.get().create(serverLevel);
     }
 
-    @Override
-    public boolean isFood(ItemStack pStack) {
-        return pStack.is(ModItems.KFC_BUCKET.get());
-    }
+
 
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return ModSounds.GOONER_IDLE.get();
+        return SoundEvents.HOGLIN_AMBIENT;
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return ModSounds.GOONER_HURT.get();
+        return SoundEvents.RAVAGER_HURT;
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return ModSounds.GOONER_DEATH.get();
+        return SoundEvents.DOLPHIN_DEATH;
     }
 }

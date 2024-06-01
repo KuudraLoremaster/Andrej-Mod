@@ -1,6 +1,7 @@
 package net.kuudraloremaster.andrejmod.datagen;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
+import net.kuudraloremaster.andrejmod.entity.ModEntities;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.kuudraloremaster.andrejmod.loot.AddItemModifier;
 import net.kuudraloremaster.andrejmod.loot.AddSusSandItemModifier;
@@ -27,6 +28,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("pine_cone_from_creeper", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()
         }, ModItems.PINE_CONE.get()));
+        add("kfc_bucket_from_gooner", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ModEntities.GOONER.getId()).build()
+        }, ModItems.KFC_BUCKET.get()));
         add("maid_from_horses", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/horse")).build()
         }, ModItems.MAID.get()));

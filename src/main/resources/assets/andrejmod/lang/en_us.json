@@ -75,6 +75,8 @@
   "item.andrejmod.gooner_spawn_egg": "Gooner Spawn Egg",
   "entity.andrejmod.gooner": "Gooner",
   "entity.andrejmod.rhino": "Rhino",
+  "entity.andrejmod.pex": "PEX",
+  "block.andrejmod.gem_polishing_station": "Gem Polishing Station ",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

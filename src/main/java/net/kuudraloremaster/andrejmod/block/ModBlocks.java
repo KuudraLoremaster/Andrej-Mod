@@ -1,6 +1,7 @@
 package net.kuudraloremaster.andrejmod.block;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
+import net.kuudraloremaster.andrejmod.block.custom.GemPolishingStationBlock;
 import net.kuudraloremaster.andrejmod.block.custom.ScaleBlock;
 import net.kuudraloremaster.andrejmod.block.custom.SoundBlock;
 import net.kuudraloremaster.andrejmod.block.custom.StrawberryCropBlock;
@@ -67,6 +68,9 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST).noOcclusion(), BlockSetType.IRON));
     public static final RegistryObject<Block> STRAWBERRY_CROP = BLOCKS.register("strawberry_crop",
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
+    public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
+            () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

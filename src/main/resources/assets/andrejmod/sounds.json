@@ -64,5 +64,23 @@
     "sounds": [
       "andrejmod:michael_schumacher"
     ]
+  },
+  "gooner_idle" : {
+    "subtitles": "sounds.andrejmod.gooner_idle",
+    "sounds": [
+      "andrejmod:gooner_idle"
+    ]
+  },
+  "gooner_hurt" : {
+    "subtitles": "sounds.andrejmod.gooner_hurt",
+    "sounds": [
+      "andrejmod:gooner_hurt"
+    ]
+  },
+  "gooner_death" : {
+    "subtitles": "sounds.andrejmod.gooner_death",
+    "sounds": [
+      "andrejmod:gooner_death"
+    ]
   }
 }

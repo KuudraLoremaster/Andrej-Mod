@@ -26,6 +26,9 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> SERGIO_PEREZ = registerSoundEvents("sergio_perez");
     public static final RegistryObject<SoundEvent> FERNANDO_ALONSO = registerSoundEvents("fernando_alonso");
     public static final RegistryObject<SoundEvent> MICHAEL_SCHUMACHER = registerSoundEvents("michael_schumacher");
+    public static final RegistryObject<SoundEvent> GOONER_IDLE = registerSoundEvents("gooner_idle");
+    public static final RegistryObject<SoundEvent> GOONER_HURT = registerSoundEvents("gooner_hurt");
+    public static final RegistryObject<SoundEvent> GOONER_DEATH = registerSoundEvents("gooner_death");
 
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f,1f,

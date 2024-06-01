@@ -16,6 +16,7 @@ public class ModEventBusEvents {
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.RHINO.get(), RhinoEntity.createAttributes().build());
         event.put(ModEntities.GOONER.get(), GoonerEntity.createAttributes().build());
+        event.put(ModEntities.PEX.get(), GoonerEntity.createAttributes().build());
     }
 
 

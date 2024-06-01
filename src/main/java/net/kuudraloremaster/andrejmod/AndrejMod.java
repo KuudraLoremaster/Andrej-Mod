@@ -2,18 +2,23 @@ package net.kuudraloremaster.andrejmod;
 
 import com.mojang.logging.LogUtils;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
+import net.kuudraloremaster.andrejmod.block.entities.ModBlockEntities;
 import net.kuudraloremaster.andrejmod.entity.ModEntities;
+import net.kuudraloremaster.andrejmod.entity.client.PexRenderer;
 import net.kuudraloremaster.andrejmod.entity.client.RhinoRenderer;
 import net.kuudraloremaster.andrejmod.entity.client.GoonerRenderer;
 import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
+import net.kuudraloremaster.andrejmod.screen.GemPolishingStationScreen;
 import net.kuudraloremaster.andrejmod.item.ModFoods;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
 import net.kuudraloremaster.andrejmod.item.custom.WindowsItem;
 import net.kuudraloremaster.andrejmod.loot.ModLootModifier;
+import net.kuudraloremaster.andrejmod.screen.ModMenuTypes;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.telemetry.TelemetryProperty;
@@ -100,6 +105,8 @@ public class AndrejMod
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
         ModLootModifier.register(modEventBus);
@@ -143,6 +150,8 @@ public class AndrejMod
         {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.GOONER.get(), GoonerRenderer::new);
+            EntityRenderers.register(ModEntities.PEX.get(), PexRenderer::new);
+            MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
         }
     }
     public static Integer weight = 5;
@@ -299,19 +308,41 @@ public class AndrejMod
                     }
                 }
                 if (item == ModItems.DUMBBELL.get()) {
-                    if (weight <= 40) {
-                        weight = 5;
-                    } else {
-                        weight -= 40;
+                    if(!hasFullSpecificArmorOn(player, ModArmorMaterials.MAID)) {
+                        if (weight <= 40) {
+                            weight = 5;
+                        } else {
+                            weight -= 40;
+                        }
+                        if (!player.getCommandSenderWorld().isClientSide) {
+                            player.sendSystemMessage(Component.literal("Your weight is " + weight));
+                        }
                     }
-                    if (!player.getCommandSenderWorld().isClientSide) {
-                        player.sendSystemMessage(Component.literal("Your weight is " + weight));
+                else {
+                    if (!player.getCommandSenderWorld().isClientSide()) {
+                        player.sendSystemMessage(Component.literal("You're a cute femboy you can't use this :3"));
                     }
+                }
                 }
                 }
             }
         }
-}
+
+        public boolean hasFullSpecificArmorOn(Player player, ArmorMaterial material) {
+            if (player.getInventory().getArmor(0).getItem() == Items.AIR || player.getInventory().getArmor(1).getItem() == Items.AIR || player.getInventory().getArmor(2).getItem() == Items.AIR || player.getInventory().getArmor(3).getItem() == Items.AIR) {
+                return false;
+            }
+
+            ArmorItem boots = (ArmorItem) player.getInventory().getArmor(0).getItem();
+            ArmorItem leggings = ((ArmorItem)player.getInventory().getArmor(1).getItem());
+            ArmorItem breastplate = ((ArmorItem)player.getInventory().getArmor(2).getItem());
+            ArmorItem helmet = ((ArmorItem)player.getInventory().getArmor(3).getItem());
+
+            return boots.getMaterial() == material && leggings.getMaterial() == material
+                    && breastplate.getMaterial() == material
+                    && helmet.getMaterial() == material;
+        }
+    }
     }
 
 

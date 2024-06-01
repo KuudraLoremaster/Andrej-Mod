@@ -2,6 +2,7 @@ package net.kuudraloremaster.andrejmod.entity;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
 import net.kuudraloremaster.andrejmod.entity.custom.GoonerEntity;
+import net.kuudraloremaster.andrejmod.entity.custom.PexEntity;
 import net.kuudraloremaster.andrejmod.entity.custom.RhinoEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -18,7 +19,10 @@ public class ModEntities {
                     .sized(2.5f, 2.5f).build("rhino"));
     public static final RegistryObject<EntityType<GoonerEntity>> GOONER =
             ENTITY_TYPES.register("gooner", () -> EntityType.Builder.of(GoonerEntity::new, MobCategory.CREATURE)
-                    .sized(5f, 5f).build("gooner"));
+                    .sized(2f, 2f).build("gooner"));
+    public static final RegistryObject<EntityType<PexEntity>> PEX =
+            ENTITY_TYPES.register("pex", () -> EntityType.Builder.of(PexEntity::new, MobCategory.CREATURE)
+                    .sized(1f, 2f).build("pex"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
