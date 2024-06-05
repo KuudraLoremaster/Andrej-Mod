@@ -1,0 +1,12 @@
+{
+  "type": "andrejmod:kfc_deepfrier",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_chicken"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "minecraft:chicken"
+  }
+}

@@ -9,7 +9,9 @@ import net.kuudraloremaster.andrejmod.entity.client.RhinoRenderer;
 import net.kuudraloremaster.andrejmod.entity.client.GoonerRenderer;
 import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
+import net.kuudraloremaster.andrejmod.recipe.ModRecipes;
 import net.kuudraloremaster.andrejmod.screen.GemPolishingStationScreen;
+import net.kuudraloremaster.andrejmod.screen.KfcDeepfrierScreen;
 import net.kuudraloremaster.andrejmod.item.ModFoods;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
@@ -110,6 +112,7 @@ public class AndrejMod
         ModSounds.register(modEventBus);
         ModEntities.register(modEventBus);
         ModLootModifier.register(modEventBus);
+        ModRecipes.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(new PlayerDeathListener());
@@ -152,6 +155,7 @@ public class AndrejMod
             EntityRenderers.register(ModEntities.GOONER.get(), GoonerRenderer::new);
             EntityRenderers.register(ModEntities.PEX.get(), PexRenderer::new);
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
+            MenuScreens.register(ModMenuTypes.KFC_DEEPFRIER_MENU.get(), KfcDeepfrierScreen::new);
         }
     }
     public static Integer weight = 5;

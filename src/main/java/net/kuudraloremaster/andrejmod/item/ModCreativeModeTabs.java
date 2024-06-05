@@ -92,6 +92,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.RHINO_SPAWN_EGG.get());
                         pOutput.accept(ModItems.GOONER_SPAWN_EGG.get());
                         pOutput.accept(ModBlocks.GEM_POLISHING_STATION.get());
+                        pOutput.accept(ModBlocks.KFC_DEEPFRIER.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

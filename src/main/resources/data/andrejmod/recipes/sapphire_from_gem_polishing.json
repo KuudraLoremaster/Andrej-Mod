@@ -1,0 +1,12 @@
+{
+  "type": "andrejmod:gem_polishing",
+  "ingredients": [
+    {
+      "item": "andrejmod:raw_sapphire"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "andrejmod:sapphire"
+  }
+}

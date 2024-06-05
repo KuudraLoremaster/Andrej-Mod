@@ -1,10 +1,7 @@
 package net.kuudraloremaster.andrejmod.block;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
-import net.kuudraloremaster.andrejmod.block.custom.GemPolishingStationBlock;
-import net.kuudraloremaster.andrejmod.block.custom.ScaleBlock;
-import net.kuudraloremaster.andrejmod.block.custom.SoundBlock;
-import net.kuudraloremaster.andrejmod.block.custom.StrawberryCropBlock;
+import net.kuudraloremaster.andrejmod.block.custom.*;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
@@ -70,6 +67,8 @@ public class ModBlocks {
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
     public static final RegistryObject<Block> GEM_POLISHING_STATION = registerBlock("gem_polishing_station",
             () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> KFC_DEEPFRIER = registerBlock("kfc_deepfrier",
+            () -> new KfcDeepfrierBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

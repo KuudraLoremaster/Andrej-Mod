@@ -76,7 +76,8 @@
   "entity.andrejmod.gooner": "Gooner",
   "entity.andrejmod.rhino": "Rhino",
   "entity.andrejmod.pex": "PEX",
-  "block.andrejmod.gem_polishing_station": "Gem Polishing Station ",
+  "block.andrejmod.gem_polishing_station": "Gem Polishing Station",
+  "block.andrejmod.kfc_deepfrier": "Kfc Deepfrier",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

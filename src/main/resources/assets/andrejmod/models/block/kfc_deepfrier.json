@@ -1,0 +1,79 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "andrejmod:block/kfc_deepfrier"
+	},
+	"elements": [
+		{
+			"from": [4, 0, -1],
+			"to": [20, 11, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 12]},
+			"faces": {
+				"north": {"uv": [3.5, 3.5, 7.5, 6.25], "texture": "#0"},
+				"east": {"uv": [0, 3.5, 3.5, 6.25], "texture": "#0"},
+				"south": {"uv": [11, 3.5, 15, 6.25], "texture": "#0"},
+				"west": {"uv": [7.5, 3.5, 11, 6.25], "texture": "#0"},
+				"up": {"uv": [7.5, 3.5, 3.5, 0], "texture": "#0"},
+				"down": {"uv": [11.5, 0, 7.5, 3.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6, 5, 0],
+			"to": [19, 16, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 7, 8]},
+			"faces": {
+				"north": {"uv": [2.5, 10, 5.75, 12.75], "texture": "#0"},
+				"east": {"uv": [-0.5, 10, 2.5, 12.75], "texture": "#0"},
+				"south": {"uv": [8.75, 10, 12, 12.75], "texture": "#0"},
+				"west": {"uv": [5.75, 10, 8.75, 12.75], "texture": "#0"},
+				"up": {"uv": [5.75, 10, 2.5, 7], "texture": "#0"},
+				"down": {"uv": [9, 7, 5.75, 10], "texture": "#0"}
+			}
+		},
+		{
+			"from": [18, 13, 5],
+			"to": [25, 15, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [29, 17, 6]},
+			"faces": {
+				"north": {"uv": [0.5, 14.25, 2.25, 14.75], "texture": "#0"},
+				"east": {"uv": [0, 14.25, 0.5, 14.75], "texture": "#0"},
+				"south": {"uv": [2.75, 14.25, 4.5, 14.75], "texture": "#0"},
+				"west": {"uv": [2.25, 14.25, 2.75, 14.75], "texture": "#0"},
+				"up": {"uv": [2.25, 14.25, 0.5, 13.75], "texture": "#0"},
+				"down": {"uv": [4, 13.75, 2.25, 14.25], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "Deepfrier",
+			"origin": [8, 2, 8],
+			"color": 0,
+			"children": [
+				{
+					"name": "main",
+					"origin": [8, 2, 8],
+					"color": 0,
+					"children": [
+						0,
+						{
+							"name": "cage",
+							"origin": [8, 2, 8],
+							"color": 0,
+							"children": [
+								1,
+								{
+									"name": "handle",
+									"origin": [8, 2, 8],
+									"color": 0,
+									"children": [2]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

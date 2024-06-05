@@ -1,7 +1,8 @@
-// 1.20.1	2024-06-01T14:12:35.0038549	Block States: andrejmod
+// 1.20.1	2024-06-04T13:46:08.3170839	Block States: andrejmod
 9605e7fc9f3c7c15f44968ade0f0e085d806f447 assets/andrejmod/blockstates/deepslate_sapphire_ore.json
 54264d3e0e80e03824c3f639b092b9e4841ce3ad assets/andrejmod/blockstates/end_stone_sapphire_ore.json
 126a610e7407267726a85c0684082a68915e0cfc assets/andrejmod/blockstates/gem_polishing_station.json
+4f6857de6ac0d8d3c5d725cb217a9428d9fec047 assets/andrejmod/blockstates/kfc_deepfrier.json
 582266256b7c06c645c1641d08bd8cb06d826f9b assets/andrejmod/blockstates/nether_sapphire_ore.json
 3967f6a9358af38ce7be3c4cbd9de7ac278afeb2 assets/andrejmod/blockstates/raw_sapphire_block.json
 48db130b3b91267818ae88a8d0a09559eb7e5ffb assets/andrejmod/blockstates/sapphire_block.json
@@ -64,6 +65,7 @@ e98decca4e9cdec492c6c35d6723ec9bf9129ef9 assets/andrejmod/models/block/strawberr
 09632a5f57ff2d2f2651ea8223c5f7ac26fdb10b assets/andrejmod/models/item/deepslate_sapphire_ore.json
 f23b9a92c98ad6094f92f8b568f1d016042d07ec assets/andrejmod/models/item/end_stone_sapphire_ore.json
 59657ce53cc4b123c438998c34d133fc343db9c3 assets/andrejmod/models/item/gem_polishing_station.json
+06d705fe3e86ca823372ecb69dc6e134e5158f86 assets/andrejmod/models/item/kfc_deepfrier.json
 8460b0ef19037a2dd1f70d722ade44b3eee21562 assets/andrejmod/models/item/nether_sapphire_ore.json
 0326c1f74d9df473b32a64bf0c88553efae6dd90 assets/andrejmod/models/item/raw_sapphire_block.json
 4334a02777907b39ab44f7d0ad62d6211bfec0df assets/andrejmod/models/item/sapphire_block.json

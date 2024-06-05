@@ -1,0 +1,12 @@
+{
+  "type": "andrejmod:kfc_deepfrier",
+  "ingredients": [
+    {
+      "item": "andrejmod:raw_kfc"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "andrejmod:kfc"
+  }
+}

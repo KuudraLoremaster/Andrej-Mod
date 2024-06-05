@@ -60,11 +60,11 @@ public class ModItems {
     public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
             () -> new SapphireStaffItem(new Item.Properties().stacksTo(1).durability(100)));
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
-            () -> new SwordItem(ModToolTier.SAPPHIRE, 1, 1f, new Item.Properties()));
+            () -> new SwordItem(ModToolTier.SAPPHIRE, 3, 0.5f, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
-            () -> new PickaxeItem(ModToolTier.SAPPHIRE, 4, 2, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTier.SAPPHIRE, 1, 0.3f, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe",
-            () -> new AxeItem(ModToolTier.SAPPHIRE, 5, 1.3f, new Item.Properties()));
+            () -> new AxeItem(ModToolTier.SAPPHIRE, 4, .7f, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel",
             () -> new ShovelItem(ModToolTier.SAPPHIRE, 0.5f, .6f, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",

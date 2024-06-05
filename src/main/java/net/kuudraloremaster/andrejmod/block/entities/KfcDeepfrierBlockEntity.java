@@ -1,8 +1,9 @@
 package net.kuudraloremaster.andrejmod.block.entities;
 
-import net.kuudraloremaster.andrejmod.item.ModItems;
-import net.kuudraloremaster.andrejmod.recipe.GemPolishingRecipe;
-import net.kuudraloremaster.andrejmod.screen.GemPolishingStationMenu;
+import net.kuudraloremaster.andrejmod.block.ModBlocks;
+import net.kuudraloremaster.andrejmod.block.custom.KfcDeepfrierBlock;
+import net.kuudraloremaster.andrejmod.recipe.KfcDeepfrierRecipe;
+import net.kuudraloremaster.andrejmod.screen.KfcDeepfrierMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -18,7 +19,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -27,29 +27,28 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.lwjgl.system.windows.INPUT;
 
 import java.util.Optional;
 
-public class GemPolishingStationBlockEntity extends BlockEntity implements MenuProvider {
+public class KfcDeepfrierBlockEntity extends BlockEntity implements MenuProvider {
 
     private final ItemStackHandler itemHandler = new ItemStackHandler(2);
 
     private static final int INPUT_SLOT = 0;
     private static final int OUTPUT_SLOT = 1;
 
-    private LazyOptional<IItemHandler> lazyItemHandler =LazyOptional.empty();
+    private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 78;
-    public GemPolishingStationBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(ModBlockEntities.GEM_POLISHING_BE.get(), pPos, pBlockState);
+    public KfcDeepfrierBlockEntity(BlockPos pPos, BlockState pBlockState) {
+        super(ModBlockEntities.KFC_DEEPFRIER_BE.get(), pPos, pBlockState);
         this.data = new ContainerData() {
             @Override
             public int get(int pIndex) {
                 return switch (pIndex) {
-                    case 0 -> GemPolishingStationBlockEntity.this.progress;
-                    case 1 -> GemPolishingStationBlockEntity.this.maxProgress;
+                    case 0 -> KfcDeepfrierBlockEntity.this.progress;
+                    case 1 -> KfcDeepfrierBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -57,8 +56,8 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
             @Override
             public void set(int pIndex, int i1) {
                 switch (pIndex) {
-                    case 0 -> GemPolishingStationBlockEntity.this.progress = i1;
-                    case 1 -> GemPolishingStationBlockEntity.this.maxProgress = i1;
+                    case 0 -> KfcDeepfrierBlockEntity.this.progress = i1;
+                    case 1 -> KfcDeepfrierBlockEntity.this.maxProgress = i1;
                 }
             }
 
@@ -98,19 +97,19 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
     @Override
     public Component getDisplayName() {
-        return Component.translatable("block.andrejmod.gem_polishing_station");
+        return Component.translatable("block.andrejmod.kfc_deepfrier");
     }
 
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
-        return new GemPolishingStationMenu(i, inventory, this, this.data);
+        return new KfcDeepfrierMenu(i, inventory, this, this.data);
     }
 
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
-        pTag.putInt("gem_polishing_station.progress", progress);
+        pTag.putInt("kfc_deepfrier.progress", progress);
         super.saveAdditional(pTag);
     }
 
@@ -118,10 +117,10 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
-        progress = pTag.getInt("gem_polishing_station.progress");
+        progress = pTag.getInt("kfc_deepfrier.progress");
     }
 
-    public void tick(Level pLevel, BlockPos pPos, BlockState pState) {
+    public void tick(Level pLevel, BlockPos pPos, BlockState pState ) {
         if (hasRecipe()) {
             increaseCraftingProgress();
             setChanged(pLevel, pPos, pState);
@@ -137,7 +136,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     private void craftItem() {
-        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
+        Optional<KfcDeepfrierRecipe> recipe = getCurrentRecipe();
         ItemStack result = recipe.get().getResultItem(null);
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
 
@@ -159,7 +158,7 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
     }
 
     private boolean hasRecipe() {
-        Optional<GemPolishingRecipe> recipe = getCurrentRecipe();
+        Optional<KfcDeepfrierRecipe> recipe = getCurrentRecipe();
         if (recipe.isEmpty()) {
             return false;
         }
@@ -167,12 +166,12 @@ public class GemPolishingStationBlockEntity extends BlockEntity implements MenuP
         return  canInsertAmountIntoOutputSlot(result.getCount()) && canInsertItemIntoOutputSlot(result.getItem());
     }
 
-    private Optional<GemPolishingRecipe> getCurrentRecipe() {
+    private Optional<KfcDeepfrierRecipe> getCurrentRecipe() {
         SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
         for (int i = 0; i < itemHandler.getSlots(); i++ ) {
             inventory.setItem(i, this.itemHandler.getStackInSlot(i));
         }
-        return this.level.getRecipeManager().getRecipeFor(GemPolishingRecipe.Type.INSTANCE, inventory, level);
+        return this.level.getRecipeManager().getRecipeFor(KfcDeepfrierRecipe.Type.INSTANCE, inventory, level);
     }
 
     private boolean canInsertItemIntoOutputSlot(Item item) {

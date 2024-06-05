@@ -17,6 +17,10 @@ public class ModBlockEntities {
             BLOCK_ENTITIES.register("gem_polishing_be", () ->
                     BlockEntityType.Builder.of(GemPolishingStationBlockEntity::new,
                             ModBlocks.GEM_POLISHING_STATION.get()).build(null));
+    public static final RegistryObject<BlockEntityType<KfcDeepfrierBlockEntity>>  KFC_DEEPFRIER_BE =
+            BLOCK_ENTITIES.register("kfc_deepfrier_be", () ->
+                    BlockEntityType.Builder.of(KfcDeepfrierBlockEntity::new,
+                            ModBlocks.KFC_DEEPFRIER.get()).build(null));
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
