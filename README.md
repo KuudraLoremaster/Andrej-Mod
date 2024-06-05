@@ -18,6 +18,8 @@ In Andrej Mod we have a scale block that reads your weight, yes we have an entir
 ## Armor
 
 Andrej Mod includes a wide variety of armor, such as Kuudra Follower, Maid Armor, Ohio Armor! and much more! You wont ever run out of armor to wear! 
+
+
 ![enter image description here](https://media.discordapp.net/attachments/1120808543658975346/1244624264687255562/armor.png?ex=6660feec&is=665fad6c&hm=06932a345711fcad8422d53f82815a6d0e79f80a9eb2618d562c3eb23378daed&=&format=webp&quality=lossless&width=477&height=351)
 
 ## Weight
