@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "andrejmod:item/ak47_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "andrejmod:item/ak47_2d"
+    },
+    "ground": {
+      "parent": "andrejmod:item/ak47_2d"
+    },
+    "fixed": {
+      "parent": "andrejmod:item/ak47_2d"
+    }
+  }
+}

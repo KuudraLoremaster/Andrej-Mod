@@ -82,5 +82,17 @@
     "sounds": [
       "andrejmod:gooner_death"
     ]
+  },
+  "ak_fire" : {
+    "subtitles": "sounds.andrejmod.ak_fire",
+    "sounds": [
+      "andrejmod:ak_fire"
+    ]
+  },
+  "ak_empty" : {
+    "subtitles": "sounds.andrejmod.ak_empty",
+    "sounds": [
+      "andrejmod:ak_empty"
+    ]
   }
 }

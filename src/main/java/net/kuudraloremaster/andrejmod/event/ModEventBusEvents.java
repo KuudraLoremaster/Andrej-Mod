@@ -3,6 +3,7 @@ package net.kuudraloremaster.andrejmod.event;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
 import net.kuudraloremaster.andrejmod.entity.ModEntities;
+import net.kuudraloremaster.andrejmod.entity.custom.BuffMinionEntity;
 import net.kuudraloremaster.andrejmod.entity.custom.GoonerEntity;
 import net.kuudraloremaster.andrejmod.entity.custom.RhinoEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -17,6 +18,7 @@ public class ModEventBusEvents {
         event.put(ModEntities.RHINO.get(), RhinoEntity.createAttributes().build());
         event.put(ModEntities.GOONER.get(), GoonerEntity.createAttributes().build());
         event.put(ModEntities.PEX.get(), GoonerEntity.createAttributes().build());
+        event.put(ModEntities.BUFF_MINION.get(), BuffMinionEntity.createAttributes().build());
     }
 
 

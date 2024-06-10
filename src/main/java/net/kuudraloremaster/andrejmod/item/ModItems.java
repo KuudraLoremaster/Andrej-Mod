@@ -10,7 +10,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, AndrejMod.MOD_ID);
@@ -58,7 +57,7 @@ public class ModItems {
     public static final RegistryObject<Item> WINDOWS = ITEMS.register("windows",
             () -> new WindowsItem(new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
-            () -> new SapphireStaffItem(new Item.Properties().stacksTo(1).durability(100)));
+            () -> new Item(new Item.Properties().stacksTo(1).durability(100)));
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
             () -> new SwordItem(ModToolTier.SAPPHIRE, 3, 0.5f, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
@@ -113,7 +112,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc5d1c5,new Item.Properties()));
     public static final RegistryObject<Item> GOONER_SPAWN_EGG = ITEMS.register("gooner_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.GOONER, 0xfcba03, 0x32a852,new Item.Properties()));
-
+    public static final RegistryObject<Item> DICE = ITEMS.register("dice",
+            () -> new DiceItem(new Item.Properties()));
+    public static final RegistryObject<Item> PISTOL = ITEMS.register("ak47", () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BULLET = ITEMS.register("bullet", () -> new Item(new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }

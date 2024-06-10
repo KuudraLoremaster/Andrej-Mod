@@ -1,6 +1,8 @@
-// 1.20.1	2024-05-28T14:58:30.6137235	Item Models: andrejmod
+// 1.20.1	2024-06-10T11:28:56.7402754	Item Models: andrejmod
 2b89f51cf2ee7d41746d4d58ff351822af9f65e4 assets/andrejmod/models/item/balls_cutter.json
 32e50e0734c44f9f71bf34768ba32dde729b20b4 assets/andrejmod/models/item/boar.json
+543cabd8a2cc21642dd396981eaadb3fcf202b2b assets/andrejmod/models/item/bullet.json
+bda76a59133c62a6da5149bdfb1aaead08fd335c assets/andrejmod/models/item/dice.json
 6ca02deff8b4c35711a704ebedc26bf039bb8597 assets/andrejmod/models/item/dumbbell.json
 768f088dcbc640a78f3ad502f51ed62834c389e3 assets/andrejmod/models/item/fernando_alonso.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/andrejmod/models/item/gooner_spawn_egg.json

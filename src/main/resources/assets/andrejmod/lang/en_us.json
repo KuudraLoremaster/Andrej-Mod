@@ -76,8 +76,13 @@
   "entity.andrejmod.gooner": "Gooner",
   "entity.andrejmod.rhino": "Rhino",
   "entity.andrejmod.pex": "PEX",
+  "entity.andrejmod.buff_minion": "Buff Minion",
+  "item.andrejmod.dice": "Dice",
+  "block.andrejmod.dice_block": "Dice Block",
   "block.andrejmod.gem_polishing_station": "Gem Polishing Station",
   "block.andrejmod.kfc_deepfrier": "Kfc Deepfrier",
+  "item.andrejmod.bullet": "Bullets",
+  "item.andrejmod.ak47": "AK-47",
   "tooltip.andrejmod.metal_detector.tooltip": "Finds Valuables Underground",
   "creativetab.andrej_tab": "Andrej Mod"
 }

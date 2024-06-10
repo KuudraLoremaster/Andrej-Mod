@@ -14,4 +14,10 @@ public class ModModelLayers {
     public static final ModelLayerLocation PEX_LAYER = new ModelLayerLocation(
             new ResourceLocation(AndrejMod.MOD_ID, "pex_layer"), "main"
     );
+    public static final ModelLayerLocation BUFF_LAYER = new ModelLayerLocation(
+            new ResourceLocation(AndrejMod.MOD_ID, "buff_layer"), "main"
+    );
+    public static final ModelLayerLocation NINE_LAYER = new ModelLayerLocation(
+            new ResourceLocation(AndrejMod.MOD_ID, "nine_layer"), "main"
+    );
 }

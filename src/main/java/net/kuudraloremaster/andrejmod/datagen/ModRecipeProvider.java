@@ -42,6 +42,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.SAPPHIRE_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.SAPPHIRE_BLOCK.get()), has(ModBlocks.SAPPHIRE_BLOCK.get()))
                 .save(pWriter);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BULLET.get(), 9)
+                .requires(Items.IRON_INGOT)
+                .requires(Items.GUNPOWDER)
+                .unlockedBy(getHasName(ModItems.PISTOL.get()), has(ModItems.PISTOL.get()))
+                .save(pWriter);
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.KFC_BUCKET.get())
                 .pattern("SSS")
                 .pattern("S#S")

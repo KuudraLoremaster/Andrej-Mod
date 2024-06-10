@@ -69,6 +69,9 @@ public class ModBlocks {
             () -> new GemPolishingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> KFC_DEEPFRIER = registerBlock("kfc_deepfrier",
             () -> new KfcDeepfrierBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> DICE_BLOCK = BLOCKS.register("dice_block",
+            () -> new DiceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

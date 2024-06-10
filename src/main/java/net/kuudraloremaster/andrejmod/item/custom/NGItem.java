@@ -1,5 +1,7 @@
 package net.kuudraloremaster.andrejmod.item.custom;
 
+import net.kuudraloremaster.andrejmod.entity.ModEntities;
+import net.kuudraloremaster.andrejmod.entity.custom.BuffMinionEntity;
 import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -14,6 +16,7 @@ import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.monster.Pillager;
 import net.minecraft.world.entity.monster.Ravager;
 import net.minecraft.world.entity.monster.Vindicator;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.raid.Raider;
 import net.minecraft.world.item.Item;
@@ -26,6 +29,9 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+import static net.minecraft.world.InteractionResult.CONSUME;
+import static net.minecraft.world.InteractionResult.SUCCESS;
+
 public class NGItem extends Item {
     public NGItem(Properties pProperties) {
         super(pProperties);
@@ -34,39 +40,25 @@ public class NGItem extends Item {
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         Player player = pContext.getPlayer();
-        boolean isGooning = true;
         Level world = pContext.getLevel();
         pContext.getLevel().playSeededSound(null,player.getX(), player.getY(), player.getZ(),
                 ModSounds.NEVER_GOON.get(), SoundSource.BLOCKS, 1f, 1f,0);
 
 
 
-        for (int i = 0; i < 10; i++) {
-            Entity vindicator = new Vindicator(EntityType.VINDICATOR, world);
-            double spawnX = player.getX() + Math.random() * 5 - 2.5;
-            double spawnY = player.getY();
-            double spawnZ = player.getZ() + Math.random() * 5 - 2.5;
-            vindicator.moveTo(spawnX, spawnY, spawnZ);
-            world.addFreshEntity(vindicator);
-        }
         for (int i = 0; i < 4; i++) {
-            Entity ravager = new Ravager(EntityType.RAVAGER, world);
+            Entity buff_minion = new BuffMinionEntity(ModEntities.BUFF_MINION.get(), world);
             double spawnX = player.getX() + Math.random() * 5 - 2.5;
             double spawnY = player.getY();
             double spawnZ = player.getZ() + Math.random() * 5 - 2.5;
-            ravager.moveTo(spawnX, spawnY, spawnZ);
-            world.addFreshEntity(ravager);
+            buff_minion.moveTo(spawnX, spawnY, spawnZ);
+            world.addFreshEntity(buff_minion);
         }
-        for (int i = 0; i < 10; i++) {
-            Entity pillager = new Pillager(EntityType.PILLAGER, world);
-            double spawnX = player.getX() + Math.random() * 5 - 2.5;
-            double spawnY = player.getY();
-            double spawnZ = player.getZ() + Math.random() * 5 - 2.5;
-            pillager.moveTo(spawnX, spawnY, spawnZ);
-            world.addFreshEntity(pillager);
-        }
+        Inventory inventory = player.getInventory();
+        ItemStack heldItem = inventory.getItem(inventory.selected);
+        heldItem.shrink(1);
 
-        return InteractionResult.SUCCESS;
+        return SUCCESS;
     }
 
     @Override

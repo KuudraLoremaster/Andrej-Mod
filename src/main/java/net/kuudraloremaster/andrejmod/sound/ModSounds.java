@@ -29,6 +29,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> GOONER_IDLE = registerSoundEvents("gooner_idle");
     public static final RegistryObject<SoundEvent> GOONER_HURT = registerSoundEvents("gooner_hurt");
     public static final RegistryObject<SoundEvent> GOONER_DEATH = registerSoundEvents("gooner_death");
+    public static final RegistryObject<SoundEvent> AK_FIRE = registerSoundEvents("ak_fire");
+    public static final RegistryObject<SoundEvent> AK_EMPTY = registerSoundEvents("ak_empty");
 
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f,1f,

@@ -28,6 +28,9 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
         add("pine_cone_from_creeper", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("entities/creeper")).build()
         }, ModItems.PINE_CONE.get()));
+        add("ak47_from_buff_minion", new AddItemModifier(new LootItemCondition[] {
+                new LootTableIdCondition.Builder(ModEntities.GOONER.getId()).build()
+        }, ModItems.PISTOL.get()));
         add("kfc_bucket_from_gooner", new AddItemModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(ModEntities.GOONER.getId()).build()
         }, ModItems.KFC_BUCKET.get()));

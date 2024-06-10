@@ -1,10 +1,12 @@
 package net.kuudraloremaster.andrejmod.entity.ai;
 
+import net.kuudraloremaster.andrejmod.entity.ModEntities;
 import net.kuudraloremaster.andrejmod.entity.custom.GoonerEntity;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraftforge.fml.common.Mod;
 
 public class GoonerAttackGoal extends MeleeAttackGoal {
     private final GoonerEntity entity;

@@ -3,7 +3,7 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "andrejmod:gooner"
+      "loot_table_id": "andrejmod:entities/gooner"
     }
   ],
   "item": "andrejmod:kfc_bucket"

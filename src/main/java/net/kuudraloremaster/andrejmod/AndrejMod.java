@@ -5,8 +5,12 @@ import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.block.entities.ModBlockEntities;
 import net.kuudraloremaster.andrejmod.entity.ModEntities;
 import net.kuudraloremaster.andrejmod.entity.client.PexRenderer;
+import net.kuudraloremaster.andrejmod.entity.client.BuffMinionRenderer;
 import net.kuudraloremaster.andrejmod.entity.client.RhinoRenderer;
 import net.kuudraloremaster.andrejmod.entity.client.GoonerRenderer;
+import net.kuudraloremaster.andrejmod.entity.custom.BulletProjectileEntity;
+import net.kuudraloremaster.andrejmod.entity.custom.DiceProjectileEntity;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
 import net.kuudraloremaster.andrejmod.recipe.ModRecipes;
@@ -28,11 +32,14 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Vec3i;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.commands.GameModeCommand;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
@@ -45,15 +52,19 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeManager;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -88,8 +99,7 @@ import java.util.UUID;
 
 import static net.minecraft.util.datafix.fixes.ItemIdFix.getItem;
 import static net.minecraft.world.InteractionHand.MAIN_HAND;
-import static net.minecraft.world.item.Items.CHEST;
-import static net.minecraft.world.item.Items.GOLD_ORE;
+import static net.minecraft.world.item.Items.*;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
 
@@ -154,6 +164,9 @@ public class AndrejMod
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.GOONER.get(), GoonerRenderer::new);
             EntityRenderers.register(ModEntities.PEX.get(), PexRenderer::new);
+            EntityRenderers.register(ModEntities.BUFF_MINION.get(), BuffMinionRenderer::new);
+            EntityRenderers.register(ModEntities.DICE_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.BULLET.get(), ThrownItemRenderer::new);
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
             MenuScreens.register(ModMenuTypes.KFC_DEEPFRIER_MENU.get(), KfcDeepfrierScreen::new);
         }
@@ -235,9 +248,7 @@ public class AndrejMod
             if (karma == 10) {
                 player.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 600, 2));
             }
-            else {
-                player.kill();
-            }
+            // removed his rainworld reference until i added the new pex du la lex
         }
         if (!player.onGround()) {
             isJumping = true;
@@ -256,6 +267,7 @@ public class AndrejMod
         if (WindowsItem.activatedWindows) {
             player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 2));
         }
+
     }
     @Mod.EventBusSubscriber(modid = "andrejmod", bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class PlayerInteractionHandler {
@@ -302,7 +314,7 @@ public class AndrejMod
                     }
                 }
                 if (item == ModItems.KYS_GUN.get()) {
-                    weight = 0;
+                    weight = 5;
                     player.kill();
                 }
                 if (item == ModItems.BOAR.get()) {
@@ -328,10 +340,51 @@ public class AndrejMod
                     }
                 }
                 }
+                if (item == ModItems.SAPPHIRE_STAFF.get()) {
+                    Entity lightning = new LightningBolt(EntityType.LIGHTNING_BOLT, world);
+                    lightning.moveTo(getPlayerPOVHitResult(world, player, ClipContext.Fluid.NONE).getBlockPos().getCenter());
+                    world.addFreshEntity(lightning);
                 }
+                if (item == ModItems.PISTOL.get()) {
+                    ItemStack bulletItem = new ItemStack(ModItems.BULLET.get());
+                        if (player.getInventory().findSlotMatchingItem(bulletItem) != -1 || player.getOffhandItem() == bulletItem) {
+                            Entity bullet = new BulletProjectileEntity(ModEntities.BULLET.get(), world);
+                            bullet.moveTo(player.getPosition(Minecraft.getInstance().getPartialTick()));
+                            player.playSound(ModSounds.AK_FIRE.get(), 1.0f, 1.0f);
+                            world.addFreshEntity(bullet);
+                            int slot = player.getInventory().findSlotMatchingItem(bulletItem);
+                            player.getInventory().getItem(slot).shrink(1);
+                            bullet.teleportTo(player.getX(), player.getY() + 1, player.getZ());
+                            Vec3 lookVec = player.getViewVector(Minecraft.getInstance().getPartialTick());
+                            bullet.setDeltaMovement(lookVec.scale(2.0));
+
+                        }
+                        else {
+                            player.playSound(ModSounds.AK_EMPTY.get(), 1.0f, 1.0f);
+                        }
+
+
+
+
+                }
+                }
+
             }
         }
-
+        protected static BlockHitResult getPlayerPOVHitResult(Level pLevel, Player pPlayer, ClipContext.Fluid pFluidMode) {
+            float f = pPlayer.getXRot();
+            float f1 = pPlayer.getYRot();
+            Vec3 vec3 = pPlayer.getEyePosition();
+            float f2 = Mth.cos(-f1 * 0.017453292F - 3.1415927F);
+            float f3 = Mth.sin(-f1 * 0.017453292F - 3.1415927F);
+            float f4 = -Mth.cos(-f * 0.017453292F);
+            float f5 = Mth.sin(-f * 0.017453292F);
+            float f6 = f3 * f4;
+            float f7 = f2 * f4;
+            double d0 = pPlayer.getBlockReach();
+            Vec3 vec31 = vec3.add((double)f6 * d0, (double)f5 * d0, (double)f7 * d0);
+            return pLevel.clip(new ClipContext(vec3, vec31, net.minecraft.world.level.ClipContext.Block.OUTLINE, pFluidMode, pPlayer));
+        }
         public boolean hasFullSpecificArmorOn(Player player, ArmorMaterial material) {
             if (player.getInventory().getArmor(0).getItem() == Items.AIR || player.getInventory().getArmor(1).getItem() == Items.AIR || player.getInventory().getArmor(2).getItem() == Items.AIR || player.getInventory().getArmor(3).getItem() == Items.AIR) {
                 return false;

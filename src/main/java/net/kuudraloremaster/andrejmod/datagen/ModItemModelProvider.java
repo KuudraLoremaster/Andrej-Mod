@@ -108,6 +108,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.MAID_LEGGINGS);
         trimmedArmorItem(ModItems.MAID_HELMET);
         simpleItem(ModItems.OHIO);
+        simpleItem(ModItems.DICE);
+        simpleItem(ModItems.BULLET);
 
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.GOONER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
