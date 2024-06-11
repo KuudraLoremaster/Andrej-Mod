@@ -15,6 +15,8 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, AndrejMod.MOD_ID);
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> USED_CARROT = ITEMS.register("used_carrot",
+            () => new Item(new Item.Properties()));
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             ()-> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PIXEL = ITEMS.register("pixel",
