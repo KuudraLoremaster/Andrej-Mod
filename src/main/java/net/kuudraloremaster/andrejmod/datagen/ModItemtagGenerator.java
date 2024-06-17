@@ -1,6 +1,7 @@
 package net.kuudraloremaster.andrejmod.datagen;
 
 import net.kuudraloremaster.andrejmod.AndrejMod;
+import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -34,5 +35,13 @@ public class ModItemtagGenerator extends ItemTagsProvider {
                         ModItems.MAID_CHESTPLATE.get(),
                         ModItems.MAID_BOOTS.get()
 
-                );}
+                );
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.PINE_LOG.get().asItem())
+                .add(ModBlocks.PINE_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_PINE_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_PINE_WOOD.get().asItem());
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.PINE_PLANKS.get().asItem());
+    }
 }

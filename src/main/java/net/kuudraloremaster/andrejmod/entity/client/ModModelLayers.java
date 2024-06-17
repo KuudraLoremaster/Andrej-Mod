@@ -17,7 +17,10 @@ public class ModModelLayers {
     public static final ModelLayerLocation BUFF_LAYER = new ModelLayerLocation(
             new ResourceLocation(AndrejMod.MOD_ID, "buff_layer"), "main"
     );
-    public static final ModelLayerLocation NINE_LAYER = new ModelLayerLocation(
-            new ResourceLocation(AndrejMod.MOD_ID, "nine_layer"), "main"
+    public static final ModelLayerLocation PINE_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(AndrejMod.MOD_ID, "boat/pine"), "main"
+    );
+    public static final ModelLayerLocation PINE_CHEST_BOAT_LAYER = new ModelLayerLocation(
+            new ResourceLocation(AndrejMod.MOD_ID, "chest_boat/pine"), "main"
     );
 }

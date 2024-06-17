@@ -94,5 +94,23 @@
     "sounds": [
       "andrejmod:ak_empty"
     ]
+  },
+  "pex_hurt" : {
+    "subtitles": "sounds.andrejmod.pex_hurt",
+    "sounds": [
+      "andrejmod:pex_hurt"
+    ]
+  },
+  "pex_idle" : {
+    "subtitles": "sounds.andrejmod.pex_idle",
+    "sounds": [
+      "andrejmod:pex_idle"
+    ]
+  },
+  "pex_death" : {
+    "subtitles": "sounds.andrejmod.pex_death",
+    "sounds": [
+      "andrejmod:pex_death"
+    ]
   }
 }

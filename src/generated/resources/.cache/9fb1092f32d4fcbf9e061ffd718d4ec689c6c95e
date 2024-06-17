@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-10T12:47:54.4640994	Recipes
+// 1.20.1	2024-06-13T15:47:56.4921514	Recipes
 f215373a7864f0eefee8249de34bf71673d8a048 data/andrejmod/advancements/recipes/combat/kuudra_follower_boots.json
 d970663a0d397096503b5202f550cf27102346f1 data/andrejmod/advancements/recipes/combat/kuudra_follower_chestplate.json
 6a72e0de0af0c43abec23cbfd365ad9df658667a data/andrejmod/advancements/recipes/combat/kuudra_follower_helmet.json
@@ -13,6 +13,7 @@ af491033f3974ab045ce8472effd881f461ab980 data/andrejmod/advancements/recipes/com
 508a65d4f4cd84cd6f4bf782738f8b0b83394efc data/andrejmod/advancements/recipes/combat/ohio_leggings.json
 bf57dc96d76268fa62a59d7eb6fa046cd992b32b data/andrejmod/advancements/recipes/misc/bullet.json
 b836adde3e1ee332a51fe5604f3309c0f6f4e5e2 data/andrejmod/advancements/recipes/misc/kfc_bucket.json
+93ed5f0b587bb47b697ab4dff480676c7f2496ff data/andrejmod/advancements/recipes/misc/pine_planks.json
 40552f24ae64a74aa873d9e570edda9da48552d9 data/andrejmod/advancements/recipes/misc/pixel.json
 1e206e3657750f17c9d861fb5cb15cfedf7243ae data/andrejmod/advancements/recipes/misc/raw_kfc.json
 40d2af3971649f2f92ba51be1c8068bc35688ac2 data/andrejmod/advancements/recipes/misc/sapphire.json
@@ -41,6 +42,7 @@ b1f64f6637042d4a79127bb7ccceaa5d34da1edc data/andrejmod/recipes/maid_leggings.js
 36503cc5688c388219331a4226c1fc717b49b166 data/andrejmod/recipes/ohio_chestplate.json
 c9b15d8e6ea63f8c5a39c00bb484f27fb1c6f2ce data/andrejmod/recipes/ohio_helmet.json
 56be1bfb99a9ef1e4d7de29f6ecbeb9886af1882 data/andrejmod/recipes/ohio_leggings.json
+728c9a8c553a197aa6606d58a7ebb603c7620ef9 data/andrejmod/recipes/pine_planks.json
 44183e0b891305f25d17fc4d492038d3287485c3 data/andrejmod/recipes/pixel.json
 13ca78973092467e502999fa3dca263de039cdce data/andrejmod/recipes/raw_kfc.json
 6c16e58899ae870c5167a93dc758533112cd4692 data/andrejmod/recipes/sapphire.json

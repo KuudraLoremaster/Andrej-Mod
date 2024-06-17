@@ -1,9 +1,18 @@
-// 1.20.1	2024-06-04T13:46:08.3250616	Loot Tables
+// 1.20.1	2024-06-17T10:51:24.3258913	Loot Tables
 6c86c5af5c936031215f8f55597cd0773c6ac4db data/andrejmod/loot_tables/blocks/deepslate_sapphire_ore.json
 2133f0e53fc045749ddcfdf77a56d980cc870914 data/andrejmod/loot_tables/blocks/end_stone_sapphire_ore.json
 60a825e055150c60b3aef24d9a32e5cb9275c5d7 data/andrejmod/loot_tables/blocks/gem_polishing_station.json
 ed65bcf3e1376fc15499e6cb1783eaf21c28ac23 data/andrejmod/loot_tables/blocks/kfc_deepfrier.json
 e06970701ae733988c8f97950dbe537c69f3e53d data/andrejmod/loot_tables/blocks/nether_sapphire_ore.json
+73ca53964aad870843b1d61e3473717454c4a26d data/andrejmod/loot_tables/blocks/pine_hanging_sign.json
+4db7512c8309e953c1dd808e393c6c86ca92784c data/andrejmod/loot_tables/blocks/pine_leaves.json
+6ccd4bdb8d425f132753e746b1fb54180457114c data/andrejmod/loot_tables/blocks/pine_log.json
+7b42790d503a378ea94ff42252b114695b9c30dc data/andrejmod/loot_tables/blocks/pine_planks.json
+e5aff1cbb07baba227c02ce276d4460ffcdfd40f data/andrejmod/loot_tables/blocks/pine_sapling.json
+951f2ea011c6ebb036ea19d6e2b037f92050a784 data/andrejmod/loot_tables/blocks/pine_sign.json
+cd0c1a66cb33fd8d8f5ec3a64b7c101af5ffa472 data/andrejmod/loot_tables/blocks/pine_wall_hanging_sign.json
+06c82c5d6693e8bc6145be0573a39fb307084855 data/andrejmod/loot_tables/blocks/pine_wall_sign.json
+4543e4da154d855162625d9d44dae945fa35254a data/andrejmod/loot_tables/blocks/pine_wood.json
 c96f2e068f6d82436ebca2545a4728f239450db2 data/andrejmod/loot_tables/blocks/raw_sapphire_block.json
 2a9cd58ae7f907727fdfca594b65b99473e3a6b9 data/andrejmod/loot_tables/blocks/sapphire_block.json
 a416df9a01f654e9bd67a67e6f66a802a7c222d1 data/andrejmod/loot_tables/blocks/sapphire_button.json
@@ -19,3 +28,5 @@ bf5fdf606fb1d354931d07766d244b073db1d9e1 data/andrejmod/loot_tables/blocks/sapph
 288a7fd16e07c58053c2fd80ecd8fdce663d8b2e data/andrejmod/loot_tables/blocks/scale_block.json
 cde692e26063a1ecf6c5e8cf9c2ddca2dc24acff data/andrejmod/loot_tables/blocks/sound_block.json
 6fa3c2ccaa7af0da5485dd8909d9d19f1e4e18c3 data/andrejmod/loot_tables/blocks/strawberry_crop.json
+d9d698b4cf60f3c9f09c2eba8fe7707a4b7f454f data/andrejmod/loot_tables/blocks/stripped_pine_log.json
+68d6b635c0ee366b4f4ca3842e2f6f2109e1e4e2 data/andrejmod/loot_tables/blocks/stripped_pine_wood.json

@@ -4,12 +4,14 @@ import com.mojang.logging.LogUtils;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.block.entities.ModBlockEntities;
 import net.kuudraloremaster.andrejmod.entity.ModEntities;
-import net.kuudraloremaster.andrejmod.entity.client.PexRenderer;
-import net.kuudraloremaster.andrejmod.entity.client.BuffMinionRenderer;
-import net.kuudraloremaster.andrejmod.entity.client.RhinoRenderer;
-import net.kuudraloremaster.andrejmod.entity.client.GoonerRenderer;
+import net.kuudraloremaster.andrejmod.entity.client.*;
 import net.kuudraloremaster.andrejmod.entity.custom.BulletProjectileEntity;
 import net.kuudraloremaster.andrejmod.entity.custom.DiceProjectileEntity;
+import net.kuudraloremaster.andrejmod.entity.custom.ModBoatEntity;
+import net.kuudraloremaster.andrejmod.util.ModWoodTypes;
+import net.kuudraloremaster.andrejmod.worldgen.biome.ModTerrablender;
+import net.kuudraloremaster.andrejmod.worldgen.biome.surface.ModSurfaceRules;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
 import net.kuudraloremaster.andrejmod.item.ModCreativeModeTabs;
@@ -102,6 +104,7 @@ import static net.minecraft.world.InteractionHand.MAIN_HAND;
 import static net.minecraft.world.item.Items.*;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(AndrejMod.MOD_ID)
@@ -124,6 +127,7 @@ public class AndrejMod
         ModLootModifier.register(modEventBus);
         ModRecipes.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
+        ModTerrablender.registerBiomes();
 
         MinecraftForge.EVENT_BUS.register(new PlayerDeathListener());
         MinecraftForge.EVENT_BUS.register(new PlayerSleepListener());
@@ -137,7 +141,7 @@ public class AndrejMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
     }
 
     private  void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -167,8 +171,11 @@ public class AndrejMod
             EntityRenderers.register(ModEntities.BUFF_MINION.get(), BuffMinionRenderer::new);
             EntityRenderers.register(ModEntities.DICE_PROJECTILE.get(), ThrownItemRenderer::new);
             EntityRenderers.register(ModEntities.BULLET.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+            EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
             MenuScreens.register(ModMenuTypes.GEM_POLISHING_MENU.get(), GemPolishingStationScreen::new);
             MenuScreens.register(ModMenuTypes.KFC_DEEPFRIER_MENU.get(), KfcDeepfrierScreen::new);
+            Sheets.addWoodType(ModWoodTypes.PINE);
         }
     }
     public static Integer weight = 5;
@@ -264,8 +271,13 @@ public class AndrejMod
         if (weight >= 40) {
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 400, 2));
         }
+        if (weight >= 300) {
+            player.kill();
+            weight = 0;
+            player.sendSystemMessage(Component.literal("you were too fucking fat lmao"));
+        }
         if (WindowsItem.activatedWindows) {
-            player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 2));
+            player.addEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 200, 2));
         }
 
     }
@@ -386,7 +398,9 @@ public class AndrejMod
             return pLevel.clip(new ClipContext(vec3, vec31, net.minecraft.world.level.ClipContext.Block.OUTLINE, pFluidMode, pPlayer));
         }
         public boolean hasFullSpecificArmorOn(Player player, ArmorMaterial material) {
-            if (player.getInventory().getArmor(0).getItem() == Items.AIR || player.getInventory().getArmor(1).getItem() == Items.AIR || player.getInventory().getArmor(2).getItem() == Items.AIR || player.getInventory().getArmor(3).getItem() == Items.AIR) {
+            if (player.getInventory().getArmor(0).getItem() == Items.AIR || player.getInventory().getArmor(1).getItem() == Items.AIR
+                    || player.getInventory().getArmor(2).getItem() == Items.AIR
+                    || player.getInventory().getArmor(3).getItem() == Items.AIR) {
                 return false;
             }
 

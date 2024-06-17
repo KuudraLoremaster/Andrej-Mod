@@ -2,6 +2,7 @@ package net.kuudraloremaster.andrejmod.entity.custom;
 
 import net.kuudraloremaster.andrejmod.entity.ModEntities;
 import net.kuudraloremaster.andrejmod.item.ModItems;
+import net.kuudraloremaster.andrejmod.sound.ModSounds;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -107,18 +108,18 @@ public class PexEntity extends Animal {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.HOGLIN_AMBIENT;
+        return ModSounds.PEX_IDLE.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.RAVAGER_HURT;
+        return ModSounds.PEX_HURT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.DOLPHIN_DEATH;
+        return ModSounds.PEX_DEATH.get();
     }
 }

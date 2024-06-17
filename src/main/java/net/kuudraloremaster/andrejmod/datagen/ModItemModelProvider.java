@@ -108,9 +108,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.MAID_LEGGINGS);
         trimmedArmorItem(ModItems.MAID_HELMET);
         simpleItem(ModItems.OHIO);
+        simpleItem(ModItems.PINE_BOAT);
+        simpleItem(ModItems.PINE_CHEST_BOAT);
         simpleItem(ModItems.DICE);
         simpleItem(ModItems.BULLET);
-
+        simpleItem(ModItems.PINE_SIGN);
+        simpleItem(ModItems.PINE_HANGING_SIGN);
+        saplingItem(ModBlocks.PINE_SAPLING);
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItems.GOONER_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
@@ -160,6 +164,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                                         "item/" + itemRegistryObject.getId().getPath()));
             });
         }
+    }
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(AndrejMod.MOD_ID, "block/" + item.getId().getPath()));
     }
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),

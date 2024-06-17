@@ -1,6 +1,8 @@
 {
   "values": [
     "andrejmod:sapphire_ore",
+    "andrejmod:nether_sapphire_ore",
+    "andrejmod:end_stone_sapphire_ore",
     "#forge:ores"
   ]
 }

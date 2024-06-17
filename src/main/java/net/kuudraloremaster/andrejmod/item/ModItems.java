@@ -3,6 +3,8 @@ package net.kuudraloremaster.andrejmod.item;
 import net.kuudraloremaster.andrejmod.AndrejMod;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.entity.ModEntities;
+import net.kuudraloremaster.andrejmod.entity.custom.ModBoatEntity;
+import net.kuudraloremaster.andrejmod.entity.custom.ModChestBoatEntity;
 import net.kuudraloremaster.andrejmod.item.custom.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -59,11 +61,11 @@ public class ModItems {
     public static final RegistryObject<Item> SAPPHIRE_STAFF = ITEMS.register("sapphire_staff",
             () -> new Item(new Item.Properties().stacksTo(1).durability(100)));
     public static final RegistryObject<Item> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword",
-            () -> new SwordItem(ModToolTier.SAPPHIRE, 3, 0.5f, new Item.Properties()));
+            () -> new SwordItem(ModToolTier.SAPPHIRE, 4, 2, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe",
-            () -> new PickaxeItem(ModToolTier.SAPPHIRE, 1, 0.3f, new Item.Properties()));
+            () -> new PickaxeItem(ModToolTier.SAPPHIRE, 1, 1, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_AXE = ITEMS.register("sapphire_axe",
-            () -> new AxeItem(ModToolTier.SAPPHIRE, 4, .7f, new Item.Properties()));
+            () -> new AxeItem(ModToolTier.SAPPHIRE, 7, 1, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel",
             () -> new ShovelItem(ModToolTier.SAPPHIRE, 0.5f, .6f, new Item.Properties()));
     public static final RegistryObject<Item> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe",
@@ -114,8 +116,16 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.GOONER, 0xfcba03, 0x32a852,new Item.Properties()));
     public static final RegistryObject<Item> DICE = ITEMS.register("dice",
             () -> new DiceItem(new Item.Properties()));
+    public static final RegistryObject<Item> PINE_SIGN = ITEMS.register("pine_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.PINE_SIGN.get(), ModBlocks.PINE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> PINE_HANGING_SIGN = ITEMS.register("pine_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.PINE_HANGING_SIGN.get(), ModBlocks.PINE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
     public static final RegistryObject<Item> PISTOL = ITEMS.register("ak47", () -> new Item(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> BULLET = ITEMS.register("bullet", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> PINE_BOAT = ITEMS.register("pine_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.PINE,new Item.Properties()));
+    public static final RegistryObject<Item> PINE_CHEST_BOAT = ITEMS.register("pine_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.PINE,new Item.Properties()));
     public static void register(IEventBus eventbus) {
         ITEMS.register(eventbus);
     }
