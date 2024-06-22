@@ -148,7 +148,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItems.MAID.get())
                 .unlockedBy(getHasName(ModItems.MAID.get()), has(ModItems.MAID.get()))
                 .save(pWriter);
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAID.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MAID_BOOTS.get())
                 .pattern("   ")
                 .pattern("S S")
                 .pattern("S S")

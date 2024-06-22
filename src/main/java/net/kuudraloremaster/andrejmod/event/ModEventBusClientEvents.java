@@ -21,6 +21,7 @@ public class ModEventBusClientEvents {
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.GOONER_LAYER, GoonerModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.RA_LAYER, RaModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.PEX_LAYER, PexModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.BUFF_LAYER, BuffMinionModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.PINE_BOAT_LAYER, BoatModel::createBodyModel);

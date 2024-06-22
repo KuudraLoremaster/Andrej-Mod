@@ -25,6 +25,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<BuffMinionEntity>> BUFF_MINION =
             ENTITY_TYPES.register("buff_minion", () -> EntityType.Builder.of(BuffMinionEntity::new, MobCategory.CREATURE)
                     .sized(2f, 6f).build("buff_minion"));
+    public static final RegistryObject<EntityType<RaEntity>> RA =
+            ENTITY_TYPES.register("ra", () -> EntityType.Builder.of(RaEntity::new, MobCategory.CREATURE)
+                    .sized(2f, 1f).build("ra"));
     public static final RegistryObject<EntityType<DiceProjectileEntity>> DICE_PROJECTILE =
             ENTITY_TYPES.register("dice_projectile", () -> EntityType.Builder.<DiceProjectileEntity>of(DiceProjectileEntity::new, MobCategory.MISC)
                     .sized(.5f, .5f).build("dice_projectile"));

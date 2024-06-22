@@ -23,4 +23,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation PINE_CHEST_BOAT_LAYER = new ModelLayerLocation(
             new ResourceLocation(AndrejMod.MOD_ID, "chest_boat/pine"), "main"
     );
+    public static final ModelLayerLocation RA_LAYER = new ModelLayerLocation(
+            new ResourceLocation(AndrejMod.MOD_ID, "ra_layer"), "main"
+    );
 }

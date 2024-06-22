@@ -32,8 +32,8 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> AK_FIRE = registerSoundEvents("ak_fire");
     public static final RegistryObject<SoundEvent> AK_EMPTY = registerSoundEvents("ak_empty");
     public static final RegistryObject<SoundEvent> PEX_IDLE = registerSoundEvents("pex_idle");
-    public static final RegistryObject<SoundEvent> PEX_HURT = registerSoundEvents("pex_hurt");
     public static final RegistryObject<SoundEvent> PEX_DEATH = registerSoundEvents("pex_death");
+    public static final RegistryObject<SoundEvent> PEX_HURT = registerSoundEvents("pex_hurt");
 
 
     public static final ForgeSoundType SOUND_BLOCK_SOUNDS = new ForgeSoundType(1f,1f,

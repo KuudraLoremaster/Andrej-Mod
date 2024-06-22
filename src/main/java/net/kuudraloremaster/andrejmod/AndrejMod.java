@@ -101,6 +101,7 @@ import java.util.UUID;
 
 import static net.minecraft.util.datafix.fixes.ItemIdFix.getItem;
 import static net.minecraft.world.InteractionHand.MAIN_HAND;
+import static net.minecraft.world.InteractionHand.OFF_HAND;
 import static net.minecraft.world.item.Items.*;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
@@ -167,6 +168,7 @@ public class AndrejMod
         {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.GOONER.get(), GoonerRenderer::new);
+            EntityRenderers.register(ModEntities.RA.get(), RaRenderer::new);
             EntityRenderers.register(ModEntities.PEX.get(), PexRenderer::new);
             EntityRenderers.register(ModEntities.BUFF_MINION.get(), BuffMinionRenderer::new);
             EntityRenderers.register(ModEntities.DICE_PROJECTILE.get(), ThrownItemRenderer::new);
@@ -289,6 +291,7 @@ public class AndrejMod
             Player player = event.getEntity();
             Level world = event.getLevel();
             Item item = player.getItemInHand(MAIN_HAND).getItem();
+            Item offHandItem = player.getItemInHand(OFF_HAND).getItem();
 
             if (item != null) {
                 if (item == Items.CLOCK) {
@@ -354,12 +357,13 @@ public class AndrejMod
                 }
                 if (item == ModItems.SAPPHIRE_STAFF.get()) {
                     Entity lightning = new LightningBolt(EntityType.LIGHTNING_BOLT, world);
+                    Vec3 lookVec = player.getViewVector(Minecraft.getInstance().getPartialTick());
                     lightning.moveTo(getPlayerPOVHitResult(world, player, ClipContext.Fluid.NONE).getBlockPos().getCenter());
                     world.addFreshEntity(lightning);
                 }
                 if (item == ModItems.PISTOL.get()) {
                     ItemStack bulletItem = new ItemStack(ModItems.BULLET.get());
-                        if (player.getInventory().findSlotMatchingItem(bulletItem) != -1 || player.getOffhandItem() == bulletItem) {
+                        if (player.getInventory().findSlotMatchingItem(bulletItem) != -1) {
                             Entity bullet = new BulletProjectileEntity(ModEntities.BULLET.get(), world);
                             bullet.moveTo(player.getPosition(Minecraft.getInstance().getPartialTick()));
                             player.playSound(ModSounds.AK_FIRE.get(), 1.0f, 1.0f);
@@ -371,6 +375,16 @@ public class AndrejMod
                             bullet.setDeltaMovement(lookVec.scale(2.0));
 
                         }
+                        else if (offHandItem == ModItems.BULLET.get()) {
+                            Entity bullet = new BulletProjectileEntity(ModEntities.BULLET.get(), world);
+                            bullet.moveTo(player.getPosition(Minecraft.getInstance().getPartialTick()));
+                            player.playSound(ModSounds.AK_FIRE.get(), 1.0f, 1.0f);
+                            world.addFreshEntity(bullet);
+                            player.getOffhandItem().shrink(1);
+                            bullet.teleportTo(player.getX(), player.getY() + 1, player.getZ());
+                            Vec3 lookVec = player.getViewVector(Minecraft.getInstance().getPartialTick());
+                            bullet.setDeltaMovement(lookVec.scale(2.0));
+                    }
                         else {
                             player.playSound(ModSounds.AK_EMPTY.get(), 1.0f, 1.0f);
                         }
