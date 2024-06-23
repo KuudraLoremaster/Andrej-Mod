@@ -34,3 +34,12 @@ Andrej has a wide variety of mobs such as the Gooner, Pex Mob and the rhino
 ## Structures
 Andrej adds 2 new structures, The Gooncave, and the Ra Temple
 ![enter image description here](https://cdn.modrinth.com/data/5pDAZqjs/images/8a3cf602fdf731660063a7daf17ccfc4a7df0bb5.png)
+
+## Biomes
+Andrej adds a new biome that spawns some of the new mobs in Andrej!
+![enter image description here](https://cdn.modrinth.com/data/5pDAZqjs/images/d8634a6a1464ce6bba95b7a331e2e284c623dc63.png)
+
+
+## Support me
+https://www.patreon.com/Kuudraloremaster
+https://ko-fi.com/kuudraloremaster
