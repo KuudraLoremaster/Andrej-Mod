@@ -29,3 +29,8 @@ Andrej Mod has a weight system if you eat too much Fried Chicken, too much weigh
 ## Mobs
 Andrej has a wide variety of mobs such as the Gooner, Pex Mob and the rhino
 ![enter image description here](https://cdn.modrinth.com/data/5pDAZqjs/images/9a2d655283d91da293d424aa6120af89d467a524.png)
+
+
+## Structures
+Andrej adds 2 new structures, The Gooncave, and the Ra Temple
+![enter image description here](https://cdn.modrinth.com/data/5pDAZqjs/images/8a3cf602fdf731660063a7daf17ccfc4a7df0bb5.png)
