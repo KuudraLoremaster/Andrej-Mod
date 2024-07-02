@@ -112,5 +112,11 @@
     "sounds": [
       "andrejmod:pex_idle"
     ]
+  },
+  "infinite_void" : {
+    "subtitles": "sounds.andrejmod.infinite_void",
+    "sounds": [
+      "andrejmod:infinite_void"
+    ]
   }
 }

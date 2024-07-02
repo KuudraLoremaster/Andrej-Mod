@@ -107,6 +107,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.PINE_BOAT.get());
                         pOutput.accept(ModItems.PINE_CHEST_BOAT.get());
                         pOutput.accept(ModBlocks.PINE_SAPLING.get());
+                        pOutput.accept(ModItems.HAND_SIGN.get());
                     })
                     .build());
     public static void register(IEventBus eventBus) {

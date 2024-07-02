@@ -1,0 +1,18 @@
+{
+  "type": "andrejmod:infinitevoid_type",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "andrejmod:infinite_void",
+      "features": false,
+      "lakes": false,
+      "layers": [
+        {
+          "block": "minecraft:barrier",
+          "height": 14
+        }
+      ],
+      "structure_overrides": "minecraft:villages"
+    }
+  }
+}

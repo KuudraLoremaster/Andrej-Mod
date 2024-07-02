@@ -43,7 +43,9 @@ public class ModItems {
             () -> new MagnusItem(new Item.Properties()));
     public static final RegistryObject<Item> WAFFLE = ITEMS.register("waffle",
             () -> new Item(new Item.Properties().food(ModFoods.WAFFLE)));
-//    F1 gooners
+    public static final RegistryObject<Item> HAND_SIGN = ITEMS.register("hand_sign",
+            () -> new HandSignItem(new Item.Properties()));
+//    F1 goobers
     public static final RegistryObject<Item> MAX_VERSTAPPEN = ITEMS.register("max_verstappen",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SERGIO_PEREZ = ITEMS.register("sergio_perez",

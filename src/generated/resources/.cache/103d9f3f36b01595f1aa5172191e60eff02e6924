@@ -1,8 +1,11 @@
-// 1.20.1	2024-06-17T12:39:00.4730214	Registries
+// 1.20.1	2024-06-29T12:48:44.4136907	Registries
+47c838e587cd50df809ea7ed4ce2d1c99d040e92 data/andrejmod/dimension/infinitevoid.json
+e241e971aacde6f4d0236c622c99d6c9caeb981e data/andrejmod/dimension_type/infinitevoid_type.json
 4c4883c65d02cf39f93a702f80b5ba1eded970c6 data/andrejmod/forge/biome_modifier/add_end_sapphire_ore.json
 7d6175c45c4781d69e2e6bfa9478183ab73a84a4 data/andrejmod/forge/biome_modifier/add_nether_sapphire_ore.json
 5a351560cd4e8533ada751776df2ae8bda4fad56 data/andrejmod/forge/biome_modifier/add_sapphire_ore.json
 f02dad305b546f3f4d5b85c1c071982778253b37 data/andrejmod/forge/biome_modifier/add_tree_pine.json
+4c31cc520e42a690ce888bc4a22a46b0e67189ec data/andrejmod/worldgen/biome/infinite_void.json
 9a88472293b1ee636e14b13a5e9cf1d45a62a06e data/andrejmod/worldgen/biome/test_biome.json
 a7b4b08c3a51ab08e106cdecb8b703009d269ead data/andrejmod/worldgen/configured_feature/end_sapphire_ore.json
 d4bc11efc398f9182be51bfea9f46da9c72e9ad8 data/andrejmod/worldgen/configured_feature/nether_sapphire_ore.json

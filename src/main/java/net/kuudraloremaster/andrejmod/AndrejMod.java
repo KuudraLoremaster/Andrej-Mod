@@ -11,6 +11,8 @@ import net.kuudraloremaster.andrejmod.entity.custom.ModBoatEntity;
 import net.kuudraloremaster.andrejmod.util.ModWoodTypes;
 import net.kuudraloremaster.andrejmod.worldgen.biome.ModTerrablender;
 import net.kuudraloremaster.andrejmod.worldgen.biome.surface.ModSurfaceRules;
+import net.kuudraloremaster.andrejmod.worldgen.dimension.ModDimensions;
+import net.kuudraloremaster.andrejmod.worldgen.portal.ModTeleporter;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
@@ -37,7 +39,10 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.commands.GameModeCommand;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -45,6 +50,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -61,6 +67,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.Vec3;
@@ -182,13 +189,35 @@ public class AndrejMod
     }
     public static Integer weight = 5;
     public static Integer karma = 1;
+
     @Mod.EventBusSubscriber(modid=MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class PlayerDeathListener {
 
     @SubscribeEvent
     public void onLivingDeath(LivingDeathEvent event) {
         Entity entity = event.getEntity();
+        if (entity instanceof LivingEntity) {
+            if (entity.level() instanceof ServerLevel serverlevel) {
 
+                ResourceKey<Level> resourcekey = entity.level().dimension() == ModDimensions.INFINITEVOID_LEVEL_KEY ?
+                        Level.OVERWORLD : ModDimensions.INFINITEVOID_LEVEL_KEY;
+                MinecraftServer minecraftserver = serverlevel.getServer();
+                ServerLevel portalDimension = minecraftserver.getLevel(resourcekey);
+                if (portalDimension != null && !entity.isPassenger()) {
+                    if (!(resourcekey == ModDimensions.INFINITEVOID_LEVEL_KEY)) {
+                        int radius = 64;
+                        AABB aabb = new AABB(
+                                entity.getX() - radius, entity.getY() - radius, entity.getZ() - radius,
+                                entity.getX() + radius, entity.getY() + radius, entity.getZ() + radius
+                        );
+                        List<Entity> entityList = entity.level().getEntities(entity, aabb, entity1 -> true);
+                        for (Entity entity2 : entityList) {
+                            entity2.changeDimension(portalDimension, new ModTeleporter(entity2.getOnPos(), true));
+                        }
+                    }
+                }
+            }
+        }
         if (entity instanceof Player) {
             Player player = (Player) entity;
             if (!player.getCommandSenderWorld().isClientSide()) {
