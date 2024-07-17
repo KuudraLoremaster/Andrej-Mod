@@ -19,6 +19,9 @@ public class ModEntities {
     public static final RegistryObject<EntityType<GoonerEntity>> GOONER =
             ENTITY_TYPES.register("gooner", () -> EntityType.Builder.of(GoonerEntity::new, MobCategory.MONSTER)
                     .sized(2f, 2f).build("gooner"));
+    public static final RegistryObject<EntityType<HollowPurpleEntity>> HOLLOW_PURPLE =
+            ENTITY_TYPES.register("hollow_purple", () -> EntityType.Builder.of(HollowPurpleEntity::new, MobCategory.MISC)
+                    .sized(2f, 2f).build("hollow_purple"));
     public static final RegistryObject<EntityType<PexEntity>> PEX =
             ENTITY_TYPES.register("pex", () -> EntityType.Builder.of(PexEntity::new, MobCategory.CREATURE)
                     .sized(1f, 2f).build("pex"));

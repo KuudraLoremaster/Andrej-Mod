@@ -1,5 +1,8 @@
 package net.kuudraloremaster.andrejmod;
 
+import com.mojang.blaze3d.systems.RenderSystem;
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.logging.LogUtils;
 import net.kuudraloremaster.andrejmod.block.ModBlocks;
 import net.kuudraloremaster.andrejmod.block.entities.ModBlockEntities;
@@ -7,12 +10,14 @@ import net.kuudraloremaster.andrejmod.entity.ModEntities;
 import net.kuudraloremaster.andrejmod.entity.client.*;
 import net.kuudraloremaster.andrejmod.entity.custom.BulletProjectileEntity;
 import net.kuudraloremaster.andrejmod.entity.custom.DiceProjectileEntity;
+import net.kuudraloremaster.andrejmod.entity.custom.HollowPurpleEntity;
 import net.kuudraloremaster.andrejmod.entity.custom.ModBoatEntity;
 import net.kuudraloremaster.andrejmod.util.ModWoodTypes;
 import net.kuudraloremaster.andrejmod.worldgen.biome.ModTerrablender;
 import net.kuudraloremaster.andrejmod.worldgen.biome.surface.ModSurfaceRules;
 import net.kuudraloremaster.andrejmod.worldgen.dimension.ModDimensions;
 import net.kuudraloremaster.andrejmod.worldgen.portal.ModTeleporter;
+import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.kuudraloremaster.andrejmod.item.ModArmorMaterials;
@@ -101,6 +106,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ForgeRegistry;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 
+import java.awt.*;
 import java.awt.event.ComponentListener;
 import java.util.List;
 import java.util.Map;
@@ -112,6 +118,17 @@ import static net.minecraft.world.InteractionHand.OFF_HAND;
 import static net.minecraft.world.item.Items.*;
 import static net.minecraft.world.level.Explosion.BlockInteraction.DESTROY;
 import net.kuudraloremaster.andrejmod.item.custom.ModArmorItem;
+import team.lodestar.lodestone.handlers.RenderHandler;
+import team.lodestar.lodestone.registry.client.LodestoneRenderTypeRegistry;
+import team.lodestar.lodestone.registry.common.particle.LodestoneParticleRegistry;
+import team.lodestar.lodestone.systems.easing.Easing;
+import team.lodestar.lodestone.systems.particle.builder.WorldParticleBuilder;
+import team.lodestar.lodestone.systems.particle.data.GenericParticleData;
+import team.lodestar.lodestone.systems.particle.data.color.ColorParticleData;
+import team.lodestar.lodestone.systems.particle.data.spin.SpinParticleData;
+import team.lodestar.lodestone.systems.postprocess.PostProcessHandler;
+import team.lodestar.lodestone.systems.rendering.VFXBuilders;
+import team.lodestar.lodestone.systems.rendering.rendeertype.RenderTypeToken;
 import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -175,6 +192,7 @@ public class AndrejMod
         {
             EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             EntityRenderers.register(ModEntities.GOONER.get(), GoonerRenderer::new);
+            EntityRenderers.register(ModEntities.HOLLOW_PURPLE.get(), HollowPurpleRenderer::new);
             EntityRenderers.register(ModEntities.RA.get(), RaRenderer::new);
             EntityRenderers.register(ModEntities.PEX.get(), PexRenderer::new);
             EntityRenderers.register(ModEntities.BUFF_MINION.get(), BuffMinionRenderer::new);
@@ -328,6 +346,20 @@ public class AndrejMod
                         player.sendSystemMessage(Component.literal("Your karma is " + karma));
                     }
                 }
+                if (item == ModItems.HOLLOW_PURPLE.get()) {
+                    if (!world.isClientSide && player != null) {
+                        world.playSeededSound(null, player.getX(), player.getY(), player.getZ(),
+                                ModSounds.PURPLE.get(), SoundSource.BLOCKS, 1f, 1f,0);
+                        // Spawn the sphere entity at the clicked position
+                        HollowPurpleEntity entity = new HollowPurpleEntity(ModEntities.HOLLOW_PURPLE.get(), world);
+                        entity.moveTo(player.getPosition(Minecraft.getInstance().getPartialTick()));
+                        Vec3 lookVec = player.getLookAngle();
+                        double speed = 2;
+                        Vec3 motion = lookVec.scale(speed);
+                        entity.setMotion(motion);
+                        world.addFreshEntity(entity);
+                    }
+                }
                 if (item == ModItems.MAX_VERSTAPPEN.get()) {
                     if (!player.getCommandSenderWorld().isClientSide()) {
                         world.playSeededSound(null,player.getX(), player.getY(), player.getZ(),
@@ -404,7 +436,7 @@ public class AndrejMod
                             bullet.setDeltaMovement(lookVec.scale(2.0));
 
                         }
-                        else if (offHandItem == ModItems.BULLET.get()) {
+                        else if (offHandItem == ModItems.BULLET.get() ) {
                             Entity bullet = new BulletProjectileEntity(ModEntities.BULLET.get(), world);
                             bullet.moveTo(player.getPosition(Minecraft.getInstance().getPartialTick()));
                             player.playSound(ModSounds.AK_FIRE.get(), 1.0f, 1.0f);
@@ -439,6 +471,11 @@ public class AndrejMod
             double d0 = pPlayer.getBlockReach();
             Vec3 vec31 = vec3.add((double)f6 * d0, (double)f5 * d0, (double)f7 * d0);
             return pLevel.clip(new ClipContext(vec3, vec31, net.minecraft.world.level.ClipContext.Block.OUTLINE, pFluidMode, pPlayer));
+        }
+
+        public static void spawnHollowPurple(PoseStack poseStack) {
+            VFXBuilders.WorldVFXBuilder builder = VFXBuilders.createWorld();
+            builder.renderSphere(poseStack, 10f, 10, 10);
         }
         public boolean hasFullSpecificArmorOn(Player player, ArmorMaterial material) {
             if (player.getInventory().getArmor(0).getItem() == Items.AIR || player.getInventory().getArmor(1).getItem() == Items.AIR

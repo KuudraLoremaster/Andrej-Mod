@@ -57,6 +57,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.KFC_BUCKET);
         simpleItem(ModItems.PINE_CONE);
         simpleItem(ModItems.WAFFLE);
+        simpleItem(ModItems.HOLLOW_PURPLE);
         simpleItem(ModItems.HAND_SIGN);
         simpleItem(ModItems.MAID);
 //      F1 racing

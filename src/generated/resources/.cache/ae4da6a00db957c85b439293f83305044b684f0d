@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-02T21:52:10.2232511	Item Models: andrejmod
+// 1.20.1	2024-07-17T10:40:45.4031379	Item Models: andrejmod
 2b89f51cf2ee7d41746d4d58ff351822af9f65e4 assets/andrejmod/models/item/balls_cutter.json
 32e50e0734c44f9f71bf34768ba32dde729b20b4 assets/andrejmod/models/item/boar.json
 543cabd8a2cc21642dd396981eaadb3fcf202b2b assets/andrejmod/models/item/bullet.json
@@ -7,6 +7,7 @@ bda76a59133c62a6da5149bdfb1aaead08fd335c assets/andrejmod/models/item/dice.json
 768f088dcbc640a78f3ad502f51ed62834c389e3 assets/andrejmod/models/item/fernando_alonso.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/andrejmod/models/item/gooner_spawn_egg.json
 e3b62f9376b9ce492c6e4894bfdf47d61665d113 assets/andrejmod/models/item/hand_sign.json
+fffae239af929f8a35ccd41945fe1f71f12b78be assets/andrejmod/models/item/hollow_purple.json
 d4d9c975008fd3cedddcca89b16c957e5b8f0ed8 assets/andrejmod/models/item/kfc.json
 7bd1675baf9f8fc97815bc9defe28242abf4fcfa assets/andrejmod/models/item/kfc_bucket.json
 59f774a6a117a355c2869b6e41471e860f1bad3c assets/andrejmod/models/item/kuudra_follower_boots.json

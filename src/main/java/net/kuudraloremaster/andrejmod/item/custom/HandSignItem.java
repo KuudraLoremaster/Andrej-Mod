@@ -56,24 +56,24 @@ public class HandSignItem extends Item {
                 if(resourcekey == ModDimensions.INFINITEVOID_LEVEL_KEY) {
                     int soundDurationTicks = 70;
                     List<Entity> p = getEntitiesNearPlayer((Player) player, 16);
-                    player.playSound(ModSounds.INFINITE_VOID.get(), 1.0f, 1.0f);
                     minecraftserver.execute(() -> {
                         try {
-                            player.playSound(ModSounds.INFINITE_VOID.get(), 1.0f, 1.0f);
+                            level.playSeededSound(null, player.getX(), player.getY(), player.getZ(),
+                                    ModSounds.INFINITE_VOID.get(), SoundSource.BLOCKS, 1f, 1f,0);
                             Thread.sleep(soundDurationTicks * 50L);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                         minecraftserver.execute(
                                 () -> {
+
+                                    for (Entity entity : p) {
+                                        entity.changeDimension(portalDimension, new ModTeleporter(pPos, false));
+                                    }
                                     player.changeDimension(portalDimension, new ModTeleporter(pPos, false));
                                 }
                         );
                     });
-                    for (Entity entity : p) {
-                        entity.playSound(ModSounds.INFINITE_VOID.get(), 1.0f, 1.0f);
-                        entity.changeDimension(portalDimension, new ModTeleporter(pPos, false));
-                    }
 
                 } else {
                     List<Entity> p = getEntitiesNearPlayer((Player) player, 16);

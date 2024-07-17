@@ -35,6 +35,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.KFC_BUCKET)));
     public static final RegistryObject<Item> KYS_GUN = ITEMS.register("kys_gun",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HOLLOW_PURPLE = ITEMS.register("hollow_purple",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
             () -> new FuelItem(new Item.Properties(), 400));
     public static final RegistryObject<Item> NEVER_GOON = ITEMS.register("never_goon",

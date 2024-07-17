@@ -118,5 +118,11 @@
     "sounds": [
       "andrejmod:infinite_void"
     ]
+  },
+  "purple" : {
+    "subtitles": "sounds.andrejmod.purple",
+    "sounds": [
+      "andrejmod:purple"
+    ]
   }
 }
